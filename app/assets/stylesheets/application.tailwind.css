@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply mb-6 text-4xl font-bold;
+  }
+  h3 {
+    @apply mb-8 text-3xl font-bold;
+  }
+  h4 {
+    @apply mb-8 text-2xl font-bold;
+  }
+  h5  {
+    @apply mb-4 text-xl font-bold;
+  }
+  h6 {
+    @apply mb-2 text-lg font-normal lg:text-xl;
+  }
+ /* a {
+    @apply text-blue-600 underline;
+  } */
+}
+
+
+
 /*
 
 @layer components {

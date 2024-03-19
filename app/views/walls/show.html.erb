@@ -1,15 +1,185 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
+  <style>
+    /* Add some styles to the canvas */
+    body {
+      margin:0;
+      padding:0 30px 0 15px;
+    }
+    canvas {
+      margin: 0;
+      background-color: #80d455;
+      border: 3px solid #375e43; /* #e7e76b; */
+      cursor: pointer;
+      width: 100%; /* Make the canvas width 100% of its parent */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>  
 
-    <%= render @wall %>
+  <div class="bg-gray-100%>">
+    <div class="container mx-auto  max-w-screen-xl text-center py-16 px-8 md:px-16 lg:px-32 font-mono">   
 
-    <%= link_to "Edit this wall", edit_wall_path(@wall), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this wall", wall_path(@wall), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <h1>Another brick in the wall</h1>
+      <h3>NFT Playground</h3>
+      <p>
+        Grab your spot on the wall and unleash your creativity
+      </p>
+
+
     </div>
-    <%= link_to "Back to walls", walls_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
+
+<canvas id="canvas"></canvas>
+
+<div class="w-full mb-5 mt-5">
+  <button id="getSelectionBtn" class="rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium mx-auto">Yes, this will be my 2 cents on the wall</button> 
 </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let squareSize = 15;  // Size of each square
+    let numRows = 18;     // Number of rows
+    let numCols = 32;     // Number of columns
+    let isMouseDown = false;
+    let startRow, startCol;
+    let endRow, endCol;
+
+    function updateCanvasSize() {
+      // Calculate canvas width and height based on square size and number of rows/columns
+      const containerWidth = canvas.parentElement.offsetWidth; // Width of the parent element
+      squareSize = Math.floor(containerWidth / numCols); // Adjust square size based on container width
+      canvas.width = squareSize * numCols;
+      canvas.height = squareSize * numRows;
+      drawGrid();
+    }
+
+    // Function to draw a grid of squares
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < numRows; i++) {
+        for (let j = 0; j < numCols; j++) {
+          ctx.strokeRect(j * squareSize, i * squareSize, squareSize, squareSize);
+        }
+      }
+    }
+
+    function handleMouseDown(event) {
+      isMouseDown = true;
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+      startRow = Math.floor(mouseY / squareSize);
+      startCol = Math.floor(mouseX / squareSize);
+    }
+
+    // Function to handle mouse move event
+    function handleMouseMove(event) {
+      if (!isMouseDown) return;
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+      // Check if mouse is outside the canvas boundaries
+      endRow = Math.floor(mouseY / squareSize);
+      endCol = Math.floor(mouseX / squareSize);
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawGrid();
+      ctx.fillStyle = 'rgba(231, 231, 107, 0.5)';
+      ctx.fillRect(
+        Math.min(startCol, endCol) * squareSize,
+        Math.min(startRow, endRow) * squareSize,
+        (Math.abs(endCol - startCol) + 1) * squareSize,
+        (Math.abs(endRow - startRow) + 1) * squareSize
+      );
+    }
+
+    // Function to handle mouse up event
+    function handleMouseUp(event) {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+      
+      // Check if mouse is still within the canvas boundaries
+      if (mouseX < 0 || mouseY < 0 || mouseX >= canvas.width || mouseY >= canvas.height) {
+        // Reset the isMouseDown flag and return without further processing
+        isMouseDown = false;
+        return;
+      }
+
+      // Continue with the existing logic to handle mouseup event within the canvas boundaries
+      const endRow = Math.floor(mouseY / squareSize);
+      const endCol = Math.floor(mouseX / squareSize);
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawGrid();
+      ctx.fillStyle = 'rgba(231, 231, 107, 0.7)';
+      ctx.fillRect(
+        Math.min(startCol, endCol) * squareSize,
+        Math.min(startRow, endRow) * squareSize,
+        (Math.abs(endCol - startCol) + 1) * squareSize,
+        (Math.abs(endRow - startRow) + 1) * squareSize
+      );
+    }
+
+    // function handleMouseUp(event) {
+    //   if (!isMouseDown) return;
+    //   isMouseDown = false;
+    //   const rect = canvas.getBoundingClientRect();
+    //   const mouseX = event.clientX - rect.left;
+    //   const mouseY = event.clientY - rect.top;
+    //   endRow = Math.floor(mouseY / squareSize);
+    //   endCol = Math.floor(mouseX / squareSize);
+
+    //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //   drawGrid();
+    //   ctx.fillStyle = 'rgba(231, 231, 107, 0.7)';
+    //   ctx.fillRect(
+    //     Math.min(startCol, endCol) * squareSize,
+    //     Math.min(startRow, endRow) * squareSize,
+    //     (Math.abs(endCol - startCol) + 1) * squareSize,
+    //     (Math.abs(endRow - startRow) + 1) * squareSize
+    //   );
+    // }
+
+
+    // Function to handle mouse leave event
+    function handleMouseLeave(event) {
+      // Reset the isMouseDown flag if it's currently true
+      if (isMouseDown) {
+        isMouseDown = false;
+        // You may want to perform additional cleanup or logic here
+      }
+    }
+
+
+
+    // Function to handle button click event
+    function handleGetSelectionInfo() {
+      const selectedRows = Math.abs(startRow - endRow) + 1;
+      const selectedCols = Math.abs(startCol - endCol) + 1;
+      const startBoxRow = Math.min(startRow, endRow);
+      const startBoxCol = Math.min(startCol, endCol); 
+      const selectionInfo = `Selected squares: ${selectedRows} rows x ${selectedCols} columns\n` +
+        `Starts at Row: ${startBoxRow + 1}, Column: ${startBoxCol + 1}`;
+ 
+      alert(selectionInfo);
+    }
+
+ 
+    // Add event listeners for mouse events
+    canvas.addEventListener('mousedown', handleMouseDown);
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseup', handleMouseUp);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
+
+    // Add event listener for button click
+    document.getElementById('getSelectionBtn').addEventListener('click', handleGetSelectionInfo);
+
+    // Initial draw of the grid
+    updateCanvasSize();
+
+    // Handle window resize for responsiveness
+    window.addEventListener('resize', updateCanvasSize);
+  </script>
+
