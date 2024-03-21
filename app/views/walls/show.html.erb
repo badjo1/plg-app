@@ -22,8 +22,6 @@
       <p>
         Start by selecting the desired boxes on the canvas to mark your chosen location. Each box represents a 15 x 15 cm area on the physical wall in the NFT Playground. Then, simply click the button below to proceed.
       </p>
-
-
     </div>
   </div>
 
@@ -54,9 +52,14 @@
 
     // Function to draw a grid of squares
     function drawGrid() {
+       
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+       ctx.strokeStyle = '#fff';
+       ctx.lineWidth = 1;
+
       for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numCols; j++) {
+       
           ctx.strokeRect(j * squareSize, i * squareSize, squareSize, squareSize);
         }
       }
@@ -87,8 +90,8 @@
       ctx.fillRect(
         Math.min(startCol, endCol) * squareSize,
         Math.min(startRow, endRow) * squareSize,
-        (Math.abs(endCol - startCol) + 1) * squareSize,
-        (Math.abs(endRow - startRow) + 1) * squareSize
+        (Math.abs(endCol - startCol) + 1) * squareSize - 1,
+        (Math.abs(endRow - startRow) + 1) * squareSize - 1
       );
     }
 
@@ -112,36 +115,17 @@
       const endCol = Math.floor(mouseX / squareSize);
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       drawGrid();
       ctx.fillStyle = 'rgba(231, 231, 107, 0.7)';
+     
       ctx.fillRect(
         Math.min(startCol, endCol) * squareSize,
         Math.min(startRow, endRow) * squareSize,
-        (Math.abs(endCol - startCol) + 1) * squareSize,
-        (Math.abs(endRow - startRow) + 1) * squareSize
+        (Math.abs(endCol - startCol) + 1) * squareSize - 1,
+        (Math.abs(endRow - startRow) + 1) * squareSize - 1
       );
     }
-
-    // function handleMouseUp(event) {
-    //   if (!isMouseDown) return;
-    //   isMouseDown = false;
-    //   const rect = canvas.getBoundingClientRect();
-    //   const mouseX = event.clientX - rect.left;
-    //   const mouseY = event.clientY - rect.top;
-    //   endRow = Math.floor(mouseY / squareSize);
-    //   endCol = Math.floor(mouseX / squareSize);
-
-    //   ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //   drawGrid();
-    //   ctx.fillStyle = 'rgba(231, 231, 107, 0.7)';
-    //   ctx.fillRect(
-    //     Math.min(startCol, endCol) * squareSize,
-    //     Math.min(startRow, endRow) * squareSize,
-    //     (Math.abs(endCol - startCol) + 1) * squareSize,
-    //     (Math.abs(endRow - startRow) + 1) * squareSize
-    //   );
-    // }
-
 
     // Function to handle mouse leave event
     function handleMouseLeave(event) {
