@@ -1,0 +1,56 @@
+
+  <!-- Header Section -->
+  <header class="bg-dark-green text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="/" class="text-yellow text-2xl font-bold">Playground Amsterdam</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg id="hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+            <!-- Close Icon (Hidden by default) -->
+            <svg id="close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
+        <nav id="nav-menu" class="hidden lg:flex space-x-6">
+          <a href="#" class="text-lg">Home</a>
+          <a href="#" class="text-lg">Podcasts</a>
+          <a href="https://lu.ma/nftplayground" class="text-lg">Calendar</a>
+          <a href="#" class="text-lg">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden on larger screens) -->
+  </header>
+  <div id="mobile-menu" class="hidden lg:hidden container mx-auto bg-light-green p-6">
+    <nav class="flex flex-col items-end space-y-6 text-2xl ">
+      <a href="#">Home</a>
+      <a href="#">Podcasts</a>
+      <a href="https://lu.ma/nftplayground">Calendar</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger');
+    const closeIcon = document.getElementById('close');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+  </script>

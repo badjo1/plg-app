@@ -65,6 +65,7 @@
       }
     }
 
+    // Function to handle mouse down event
     function handleMouseDown(event) {
       isMouseDown = true;
       const rect = canvas.getBoundingClientRect();
@@ -72,6 +73,7 @@
       const mouseY = event.clientY - rect.top;
       startRow = Math.floor(mouseY / squareSize);
       startCol = Math.floor(mouseX / squareSize);
+      endRow =  endCol = 0;
     }
 
     // Function to handle mouse move event
@@ -136,8 +138,6 @@
       }
     }
 
-
-
     // Function to handle button click event
     function handleGetSelectionInfo() {
       const selectedRows = Math.abs(startRow - endRow) + 1;
@@ -149,7 +149,6 @@
  
       alert(selectionInfo);
     }
-
  
     // Add event listeners for mouse events
     canvas.addEventListener('mousedown', handleMouseDown);

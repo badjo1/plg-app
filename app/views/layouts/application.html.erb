@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Plg</title>
+    <title>Playground Amsterdam</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%=  stylesheet_link_tag "tailwind", "inter-font","data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <main class="container mx-auto" _class="container mx-auto mt-28 px-5 flex">
+  <body class="bg-[#e1ede0] text-gray-900">
+    <header class="w-full bg-dark-green">
+      <%= render 'layouts/header' %>
+    </header>
+    <main class="container mx-auto p-4">
       <%= yield %>
     </main>
+    <footer class="w-full bg-dark-green text-white py-8 border-t border-t-gray-200">
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>
