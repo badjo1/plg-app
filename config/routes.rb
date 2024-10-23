@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
   
-  get :maisonscript, to: "maison_script#index"
-
-  root "pages#home"
-
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    get :maisonscript, to: "pages#maisonscript"
+    get "who-we-are", to: "pages#who_we_are", as: "who_we_are"
+    get "what-we-do", to: "pages#what_we_do", as: "what_we_do"
+    get :vision, to: "pages#vision", as: "vision"
+    get :privacy, to: "pages#privacy", as: "privacy"
+    root "pages#home"
+  end
 end

@@ -1,31 +1,25 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  locales:
+    nl: Nederlands
+  global:
+    footer:
+      about_us: About us
+      who_we_are: Who we are 
+      what_we_do: What we do 
+      vision: Vision
+      privacy: Privacy
+    forms:
+      submit: SAVE
+    menu:
+      home: Home
+      podcast: Podcast
+      calendar: Calendar
+      contact: Contact    
+  pages:
+    home:
+      teaser: What if you could make a difference through play?
+      statement: In the Playground, we create a unique space for experimentation and discovery together. Here, we share our passion and turn ideas into action. Join us, and let’s grow together!          
+      get_started: Get Started
+      learn_more: Learn More
+    who_we_are:
+

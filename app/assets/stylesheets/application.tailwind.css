@@ -22,8 +22,18 @@
  /* a {
     @apply text-blue-600 underline;
   } */
-}
+  p {
+    @apply font-mono font-medium text-lg leading-relaxed mb-2;
+  }
 
+  p::first-letter {
+    _font-size: 1.612em; /* Pas de grootte aan zoals gewenst */
+  }
+
+  section {
+    @apply max-w-[860px] w-full mx-auto px-4;
+  }
+}
 
 @tailwind components;
 

@@ -1,0 +1,24 @@
+nl:
+  locales:
+    en: English
+  global:
+    footer:
+      about_us: Over ons
+      who_we_are: Wie we zijn 
+      what_we_do: Wat we doen
+      vision: Visie
+      privacy: Privacy
+    forms:
+      submit: BEWAAR
+    menu:
+      home: Home
+      podcast: Podcast
+      calendar: Calendar
+      contact: Contact    
+  pages:
+    home:
+      teaser: Wat als je spelenderwijs het verschil kunt maken?
+      statement: In de Playground creëren we samen een unieke ruimte voor experimenteren en ontdekken. Hier delen we onze passie en zetten we ideeën om in actie. Doe mee en laten we samen groeien!          
+      get_started: begin hier
+      learn_more: meer leren
+    who_we_are:

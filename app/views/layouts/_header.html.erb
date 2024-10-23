@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
-        <a href="/" class="text-yellow text-2xl font-bold">Playground Amsterdam</a>
+        <a href="/" class="text-yellow text-2xl font-mono font-bold">Playground Amsterdam</a>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="block lg:hidden">
@@ -22,10 +22,18 @@
 
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <a href="#" class="text-lg">Home</a>
-          <a href="#" class="text-lg">Podcasts</a>
-          <a href="https://lu.ma/nftplayground" class="text-lg">Calendar</a>
-          <a href="#" class="text-lg">Contact</a>
+          <a href="#" class="text-lg"><%= t 'globlal.menu.home' %></a>
+          <a href="#" class="text-lg"><%= t 'globlal.menu.podcast' %></a>
+          <a href="https://lu.ma/nftplayground" class="text-lg"><%= t 'globlal.menu.calendar' %></a>
+          <a href="#" class="text-lg"><%= t 'globlal.menu.contact' %></a>
+          <% I18n.available_locales.each do |locale| %>
+            <% if I18n.locale == locale %>
+              <!-- do nothing -->
+            <% else %>
+              <%= link_to t(locale, scope: 'locales'), url_for(locale:locale), class: "text-lg" %>
+            <% end %>
+          <% end %>
+
         </nav>
       </div>
     </div>
@@ -34,10 +42,10 @@
   </header>
   <div id="mobile-menu" class="hidden lg:hidden container mx-auto bg-light-green p-6">
     <nav class="flex flex-col items-end space-y-6 text-2xl ">
-      <a href="#">Home</a>
-      <a href="#">Podcasts</a>
-      <a href="https://lu.ma/nftplayground">Calendar</a>
-      <a href="#">Contact</a>
+      <a href="#"><%= t 'globlal.menu.home' %></a>
+      <a href="#"><%= t 'globlal.menu.podcast' %></a>
+      <a href="https://lu.ma/nftplayground"><%= t 'globlal.menu.calendar' %></a>
+      <a href="#"><%= t 'globlal.menu.contact' %></a>
     </nav>
   </div>
 
@@ -54,3 +62,5 @@
       closeIcon.classList.toggle('hidden');
     });
   </script>
+
+

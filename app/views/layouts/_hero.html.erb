@@ -1,0 +1,21 @@
+<% content_for :hero do %>
+  <!-- Responsive Image with Title Overlay -->
+  <div class="relative mx-auto mb-8">
+      <div class="absolute -top-0 left-0 w-full flex justify-center z-10">
+        <div class="w-64 h-64 bg-transparent flex items-center justify-center text-center text-white font-mono font-bold" style="font-size: 4rem; line-height: 1.2;">
+          <div>
+            <% if defined?(text) && text.length == 9 %>
+              <%= text[0] %> <%= text[1] %> <%= text[2] %><br>
+              <%= text[3] %> <%= text[4] %> <%= text[5] %><br>
+              <%= text[6] %> <%= text[7] %> <%= text[8] %>
+            <% else %>
+              W A N<br> 
+              N A P<br>
+              L A Y 
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <%=  image_tag(image, alt: "", class: "w-full object-cover sm:w-auto sm:h-[75vh] mx-auto", loading: "lazy")  %>
+  </div>
+<% end %>

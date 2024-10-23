@@ -7,17 +7,18 @@
     <% end %>
   </div>
   <div>
-    <h3 class="text-xl font-bold mb-3 text-yellow">About us</h3>
+    <h3 class="text-xl font-bold mb-3 text-yellow"><%= t 'global.footer.about_us' %></h3>
     <ul>
-      <li><a href="#">Who we are</a></li>
-      <li><a href="#">Manifest</a></li>
-      <li><a href="#">Privacy</a></li>
+      <li><%= link_to t('global.footer.who_we_are'), who_we_are_path %></li>
+      <li><%= link_to t('global.footer.what_we_do'), what_we_do_path %></li>
+      <li><%= link_to t('global.footer.vision'), vision_path %></li>
+      <li><%= link_to t('global.footer.privacy'), privacy_path %></li>
     </ul>
   </div>
   <div>
     <h3 class="text-xl font-bold mb-3 text-yellow">Playgrounds</h3>
     <ul>
-      <li><a href="#">Regenton</a></li>
+      <li><a href="https://regenton.playgroud.amsterdam" target="_blank">Regenton</a></li>
       <li><a href="#">VeBetter</a></li>
       <li><a href="#">Maison</a></li>
       <li><a href="#">FAQ</a></li>
