@@ -19,9 +19,11 @@
   h6 {
     @apply mb-2 text-lg font-normal lg:text-xl;
   }
- /* a {
-    @apply text-blue-600 underline;
-  } */
+  a {
+    @apply font-mono;
+  } 
+  a:hover {
+  }
   p {
     @apply font-mono font-medium text-lg leading-relaxed mb-2;
   }
@@ -31,7 +33,7 @@
   }
 
   section {
-    @apply max-w-[860px] w-full mx-auto px-4;
+    @apply px-4;
   }
 }
 

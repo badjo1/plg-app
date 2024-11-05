@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-
+	allow_unauthenticated_access
 	def home
 	end
 
@@ -8,4 +8,8 @@ class PagesController < ApplicationController
 
 	def what_we_do
 	end
+
+	def privacy
+	end
+
 end

@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-	include Internationalization
+  include Authentication
+  include Internationalization
 end

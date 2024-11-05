@@ -33,7 +33,11 @@
               <%= link_to t(locale, scope: 'locales'), url_for(locale:locale), class: "text-lg" %>
             <% end %>
           <% end %>
-
+          <% if authenticated? %>
+            <%= button_to "Logout, #{Current.user.email_address }", session_path, method: :delete, class: "text-lg " %>
+          <% else %>
+             <%= link_to "Login", new_session_path, class: "text-lg" %>
+          <% end %>
         </nav>
       </div>
     </div>
