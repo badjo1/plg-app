@@ -2,27 +2,27 @@
 
 @layer base {
   h1 {
-    @apply mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
+    @apply mb-6 text-4xl font-mono font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl;
   }
   h2 {
-    @apply mb-6 text-4xl font-bold;
+    @apply mb-6 text-4xl font-sans font-bold;
   }
   h3 {
-    @apply mb-8 text-3xl font-bold;
+    @apply mb-8 text-3xl font-sans font-bold;
   }
   h4 {
-    @apply mb-8 text-2xl font-bold;
+    @apply mb-8 text-2xl font-sans font-bold;
   }
   h5  {
-    @apply mb-4 text-xl font-bold;
+    @apply mb-4 text-xl font-sans font-bold;
   }
   h6 {
-    @apply mb-2 text-lg font-normal lg:text-xl;
+    @apply mb-2 text-lg font-sans font-normal lg:text-xl;
   }
   a {
-    @apply font-mono;
   } 
-  a:hover {
+  a:hover { 
+    @apply underline;
   }
   p {
     @apply font-mono font-medium text-lg leading-relaxed mb-2;
@@ -41,7 +41,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900;
+    @apply inline-flex justify-center items-center py-3 px-5 text-base font-sans font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900;
   }
   .btn-secondary {
     @apply relative flex items-center gap-2 transition-colors justify-center bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded p-3 w-full;
@@ -70,6 +70,4 @@
 .bg-dark-green { background-color: #375e43; }
 .bg-yellow { background-color: #e7e76b; }
 .text-yellow { color: #e7e76b; }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 

@@ -1,5 +1,5 @@
  <!-- Footer Section -->
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left font-sans">
   <div>
     <a href="https://your-link.com" target="_blank">
     <%= link_to root_path do %> 
@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <div>
-    <h3 class="text-xl font-bold mb-3 text-yellow"><%= t 'global.footer.about_us' %></h3>
+    <h3 class="text-xl font-mono font-bold mb-3 text-yellow"><%= t 'global.footer.about_us' %></h3>
     <ul>
       <li><%= link_to t('global.footer.who_we_are'), who_we_are_path %></li>
       <li><%= link_to t('global.footer.what_we_do'), what_we_do_path %></li>

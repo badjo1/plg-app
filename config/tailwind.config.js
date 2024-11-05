@@ -8,10 +8,10 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
+    fontFamily: {
+      'sans': ['Gotham A','Gotham B',...defaultTheme.fontFamily.sans],
+      'serif': [...defaultTheme.fontFamily.serif],
+      'mono': ['Operator Mono A','Operator Mono B',...defaultTheme.fontFamily.mono]
     },
   },
   plugins: [
