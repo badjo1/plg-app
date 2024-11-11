@@ -12,4 +12,9 @@ class PagesController < ApplicationController
 	def privacy
 	end
 
+	def calendar
+		to_url = "https://lu.ma/playground.amsterdam"
+		redirect_to to_url, allow_other_host: true 
+	end
+
 end

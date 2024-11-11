@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get "what-we-do", to: "pages#what_we_do", as: "what_we_do"
     get :vision, to: "pages#vision", as: "vision"
     get :privacy, to: "pages#privacy", as: "privacy"
+    get :calendar, to: "pages#calendar", as: "calendar"
     root "pages#home"
   end
 end

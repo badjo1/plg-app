@@ -22,15 +22,20 @@
 
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <a href="#" class="text-lg"><%= t 'globlal.menu.home' %></a>
-          <a href="#" class="text-lg"><%= t 'globlal.menu.podcast' %></a>
+          <%= link_to t('globlal.menu.home'), root_path, class: "text-lg" %>
+          <%= link_to t('globlal.menu.podcast'), "#", class: "text-lg" %>
           <a href="https://lu.ma/nftplayground" class="text-lg"><%= t 'globlal.menu.calendar' %></a>
           <a href="#" class="text-lg"><%= t 'globlal.menu.contact' %></a>
           <% I18n.available_locales.each do |locale| %>
             <% if I18n.locale == locale %>
               <!-- do nothing -->
             <% else %>
-              <%= link_to t(locale, scope: 'locales'), url_for(locale:locale), class: "text-lg" %>
+              <%= link_to url_for(locale:locale), class: "text-lg" do %>
+                <div class="flex items-center text-nowrap">
+                  <%=  image_tag("flag_#{locale}.png", width: "16", height: "11", alt: "flag-icon", class: "flex-none w-16 h-11", loading: "lazy")  %>
+                  <span class="ml-2"><%= t(locale, scope: 'locales') %></span>
+                </div>
+              <% end %>
             <% end %>
           <% end %>
           <% if authenticated? %>
