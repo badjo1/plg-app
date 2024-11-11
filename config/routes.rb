@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     get :vision, to: "pages#vision", as: "vision"
     get :privacy, to: "pages#privacy", as: "privacy"
     get :calendar, to: "pages#calendar", as: "calendar"
+    get :featured, to: "pages#featured", as: "featured"
     root "pages#home"
   end
 end
