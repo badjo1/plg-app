@@ -32,7 +32,7 @@
             <% else %>
               <%= link_to url_for(locale:locale), class: "text-lg" do %>
                 <div class="flex items-center text-nowrap">
-                  <%=  image_tag("flag_#{locale}.png", width: "16", height: "11", alt: "flag-icon", class: "flex-none w-16 h-11", loading: "lazy")  %>
+                  <%=  image_tag("flag_#{locale}.png", width: "16", height: "11", alt: "flag-icon", class: "flex-none", loading: "lazy")  %>
                   <span class="ml-2"><%= t(locale, scope: 'locales') %></span>
                 </div>
               <% end %>
