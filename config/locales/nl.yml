@@ -13,8 +13,10 @@ nl:
     menu:
       home: Home
       podcast: Podcast
-      calendar: Calendar
-      contact: Contact    
+      calendar: Kijk in de agenda
+      contact: Contact
+      login: Inloggen
+      logout: Uitloggen
   pages:
     home:
       teaser: Wat als je spelenderwijs het verschil kunt maken?

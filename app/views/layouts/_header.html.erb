@@ -1,4 +1,3 @@
-
   <!-- Header Section -->
   <header class="bg-dark-green font-sans text-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,10 +21,10 @@
 
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <%= link_to t('globlal.menu.home'), root_path, class: "text-lg" %>
-          <%= link_to t('globlal.menu.podcast'), "#", class: "text-lg" %>
-          <a href="https://lu.ma/nftplayground" class="text-lg"><%= t 'globlal.menu.calendar' %></a>
-          <a href="#" class="text-lg"><%= t 'globlal.menu.contact' %></a>
+          <%= link_to t('global.menu.home'), root_path, class: "text-lg" %>
+          <%= link_to t('global.menu.podcast'), "#", class: "text-lg" %>
+          <a href="https://lu.ma/playground.amsterdam" class="text-lg"><%= t('global.menu.calendar') %></a>
+          <a href="#" class="text-lg"><%= t('global.menu.contact') %></a>
           <% I18n.available_locales.each do |locale| %>
             <% if I18n.locale == locale %>
               <!-- do nothing -->
@@ -39,23 +38,25 @@
             <% end %>
           <% end %>
           <% if authenticated? %>
-            <%= button_to "Logout, #{Current.user.email_address }", session_path, method: :delete, class: "text-lg " %>
+            <%= button_to "t('global.menu.logout'), #{Current.user.email_address }", session_path, method: :delete, class: "text-lg " %>
           <% else %>
-             <%= link_to "Login", new_session_path, class: "text-lg" %>
+             <%= link_to t('global.menu.login'), new_session_path, class: "text-lg" %>
           <% end %>
         </nav>
       </div>
     </div>
-
-    <!-- Mobile Menu (hidden on larger screens) -->
   </header>
-  <div id="mobile-menu" class="hidden lg:hidden container mx-auto bg-light-green p-6">
-    <nav class="flex flex-col items-end space-y-6 text-2xl ">
-      <a href="#"><%= t 'globlal.menu.home' %></a>
-      <a href="#"><%= t 'globlal.menu.podcast' %></a>
-      <a href="https://lu.ma/nftplayground"><%= t 'globlal.menu.calendar' %></a>
-      <a href="#"><%= t 'globlal.menu.contact' %></a>
-    </nav>
+  <!-- Mobile Menu (hidden on larger screens) -->
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-light-green">
+    <div class="container mx-auto p-6">
+      <nav class="flex flex-col items-end space-y-6 text-2xl ">
+        <a href="#"><%= t 'globlal.menu.home' %></a>
+        <a href="#"><%= t 'globlal.menu.podcast' %></a>
+        <a href="https://lu.ma/nftplayground"><%= t 'globlal.menu.calendar' %></a>
+        <a href="#"><%= t 'globlal.menu.contact' %></a>
+      </nav>
+    </div>
   </div>
 
   <!-- JavaScript for Menu Toggle -->
@@ -71,5 +72,6 @@
       closeIcon.classList.toggle('hidden');
     });
   </script>
+
 
 
