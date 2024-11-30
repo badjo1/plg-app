@@ -18,19 +18,17 @@
     <%=  stylesheet_link_tag "tailwind", "inter-font","data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class="bg-[#e1ede0] text-gray-900">
-    <header class="w-full bg-dark-green">
+  <body class="bg-yellow text-gray-900">
+    <header class="w-full">
       <%= render 'layouts/header' %>
     </header>
     <%= yield :hero %>
-    <div class="min-h-screen flex flex-col">
-      <main class="container flex-grow mx-auto md:w-2/3 w-full py-8">
-        <%= render "layouts/flash" %> 
-        <%= yield %>
-      </main>
-      <footer class="w-full bg-dark-green text-white py-8 border-t border-t-gray-200">
-        <%= render 'layouts/footer' %>
-      </footer>
-    </div>
+    <main class="container mx-auto md:w-2/3 w-full py-8">
+      <%= render "layouts/flash" %> 
+      <%= yield %>
+    </main>
+    <footer class="w-full bg-dark-green text-white py-8 border-t border-t-black">
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

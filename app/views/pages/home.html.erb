@@ -1,12 +1,22 @@
+<%= link_to "https://lu.ma/euampoxr", target: "_blank" do %>
+ <%=  image_tag("2024_Wondermarkt_Walenweeshuis.png", alt: "", class: "w-full object-cover sm:w-auto sm:h-[75vh] mx-auto mb-5", loading: "lazy")  %>
+<% end %>
 
-<section class="mb-4">
+<section class="mx-auto  max-w-screen-xl text-center mb-4">
   <h2 class="text-black"><%= t '.teaser' %></h2>
-  <h6 class="text-gray-700"><%= t '.statement' %></h6>
+  <h6 class="text-gray-700 w-3/4 mx-auto"><%= t '.statement' %></h6>
 </section>
 
-<section class="mb-4">
-  <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-    <%= t '.get_started' %></button>
-  <button class="bg-gray-300 text-gray-900 px-4 py-2 rounded hover:bg-gray-400"><%= t '.learn_more' %></button>
+<section class="mb-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+  <button 
+    class="w-full sm:w-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:bg-blue-700" 
+    aria-label="<%= t '.get_started' %>">
+    <%= t '.get_started' %>
+  </button>
+  <button 
+    class="w-full sm:w-auto bg-gray-300 text-gray-900 px-4 py-2 rounded hover:bg-gray-400 focus:bg-gray-500" 
+    aria-label="<%= t '.learn_more' %>">
+    <%= t '.learn_more' %>
+  </button>
 </section>
-   
+

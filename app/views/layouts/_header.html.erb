@@ -1,13 +1,13 @@
   <!-- Header Section -->
-  <header class="bg-dark-green font-sans text-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="bg-yellow font-sans">
+    <div id="menu-toggle" class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <!-- Logo -->
-        <a href="/" class="text-yellow text-2xl font-bold">Playground Amsterdam</a>
+        <a href="/" class="text-light-green text-2xl font-bold">Playground Amsterdam</a>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="block lg:hidden">
-          <button id="menu-toggle" class="focus:outline-none">
+          <button class="focus:outline-none">
             <!-- Hamburger Icon -->
             <svg id="hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -22,7 +22,7 @@
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
           <%= link_to t('global.menu.home'), root_path, class: "text-lg" %>
-          <%= link_to t('global.menu.podcast'), "#", class: "text-lg" %>
+          <%= link_to t('global.menu.podcast'), "https://nftplayground.amsterdam/podcast/", class: "text-lg" %>
           <a href="https://lu.ma/playground.amsterdam" class="text-lg"><%= t('global.menu.calendar') %></a>
           <a href="#" class="text-lg"><%= t('global.menu.contact') %></a>
           <% I18n.available_locales.each do |locale| %>
@@ -48,11 +48,11 @@
   </header>
   <!-- Mobile Menu (hidden on larger screens) -->
 
-  <div id="mobile-menu" class="hidden lg:hidden bg-light-green">
-    <div class="container mx-auto p-6">
+  <div id="mobile-menu" class="hidden lg:hidden">
+    <div class="container mx-auto p-6 bg-light-green">
       <nav class="flex flex-col items-end space-y-6 text-2xl ">
         <a href="#"><%= t 'globlal.menu.home' %></a>
-        <a href="#"><%= t 'globlal.menu.podcast' %></a>
+        <a href="https://nftplayground.amsterdam/podcast/"><%= t 'globlal.menu.podcast' %></a>
         <a href="https://lu.ma/nftplayground"><%= t 'globlal.menu.calendar' %></a>
         <a href="#"><%= t 'globlal.menu.contact' %></a>
       </nav>
