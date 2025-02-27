@@ -9,6 +9,9 @@ class PagesController < ApplicationController
 	def what_we_do
 	end
 
+	def vision
+	end
+
 	def privacy
 	end
 
