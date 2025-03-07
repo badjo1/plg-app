@@ -21,10 +21,8 @@
 
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <%= link_to t('global.menu.home'), root_path, class: "text-lg" %>
-          <%= link_to t('global.menu.podcast'), "https://nftplayground.amsterdam/podcast/", class: "text-lg" %>
-          <a href="https://lu.ma/playground.amsterdam" class="text-lg"><%= t('global.menu.calendar') %></a>
-          <a href="#" class="text-lg"><%= t('global.menu.contact') %></a>
+          <%= link_to t('global.menu.stories'), stories_path, class: "text-lg" %>
+          <%= link_to t('global.menu.Events'), events_path, class: "text-lg" %>
           <% I18n.available_locales.each do |locale| %>
             <% if I18n.locale == locale %>
               <!-- do nothing -->

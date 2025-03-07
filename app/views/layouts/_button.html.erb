@@ -1,0 +1,7 @@
+<% style ||= "bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-700" %>
+<% style = "bg-gray-300 text-gray-900 hover:bg-gray-400 focus:bg-gray-500" if style == "grey" %>
+
+<%= link_to href, class: "w-full sm:w-auto px-4 py-2 rounded text-center  hover:no-underline whitespace-nowrap #{style}", aria: { label: text } do %>
+  <!-- room for icon height 15 -->
+  <%= text %>
+<% end %>

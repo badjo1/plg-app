@@ -16,19 +16,21 @@
     </ul>
   </div>
   <div>
-    <h3 class="text-xl font-bold mb-3 text-yellow">Playgrounds</h3>
+    <h3 class="text-xl font-bold mb-3 text-yellow">Playground</h3>
     <ul>
-      <li><a href="https://regenton.playground.amsterdam" target="_blank">Regenton</a></li>
-      <li><a href="#">VeBetter</a></li>
-      <li><a href="#">Maison</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><%= link_to t('global.footer.what_is_going_on'), now_path %></li>
+      <li><%= link_to t('global.footer.get_involved'), get_involved_path %></li>
+      <li><%= link_to t('global.footer.explore'), explore_path %></li>
+      <li><%= link_to t('global.footer.hosted_communities'), communities_path %></li>
     </ul>
-  </div>
+  </div> 
   <div>
     <h3 class="text-xl font-bold mb-3 text-yellow">Community</h3>
     <ul>
       <li><a href="#">Discord</a></li>
       <li><a href="#">Twitter</a></li>
+      <li><%= link_to t('global.footer.governance'), governance_path %></li>
+      <li><%= link_to t('global.footer.token'), token_path %></li>
     </ul>
   </div>
 </div>

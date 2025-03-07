@@ -1,22 +1,133 @@
-<%= link_to "https://lu.ma/euampoxr", target: "_blank" do %>
- <%=  image_tag("2024_Wondermarkt_Walenweeshuis.png", alt: "", class: "w-full object-cover sm:w-auto sm:h-[75vh] mx-auto mb-5", loading: "lazy")  %>
-<% end %>
 
-<section class="mx-auto  max-w-screen-xl text-center mb-4">
-  <h2 class="text-black"><%= t '.teaser' %></h2>
-  <h6 class="text-gray-700 w-3/4 mx-auto"><%= t '.statement' %></h6>
+
+
+  
+  <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
+  <div class="max-w-7xl mx-auto text-center px-6">
+    <h1 class="text-5xl font-bold leading-tight">Welcome to the Playground</h1>
+    <p class="mt-4 text-xl">Where creativity, technology, and community collide to build the future.</p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"">
+      <%= render 'layouts/button', text: t('.get_involved'), href: get_involved_path %>
+      <%= render 'layouts/button', text: t('.explore'), href: explore_path, style: "grey"%>
+    </div>
+    <!--
+    <div class="mt-8">
+      <a href="#get-started" class="bg-white text-green-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">Get Started</a>
+      
+
+    </div>
+    -->
+  </div>
 </section>
 
-<section class="mb-4 flex flex-col sm:flex-row justify-center items-center gap-4">
-  <button 
-    class="w-full sm:w-auto bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:bg-blue-700" 
-    aria-label="<%= t '.get_started' %>">
-    <%= t '.get_started' %>
-  </button>
-  <button 
-    class="w-full sm:w-auto bg-gray-300 text-gray-900 px-4 py-2 rounded hover:bg-gray-400 focus:bg-gray-500" 
-    aria-label="<%= t '.learn_more' %>">
-    <%= t '.learn_more' %>
-  </button>
+<!-- About the Playground -->
+<section id="about" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-green-800">What is the Playground?</h2>
+    <p class="mt-4 text-lg text-gray-700">
+      The Playground is a space where digital creators, entrepreneurs, and artists come together to experiment, collaborate, and create impact.
+      It's more than just a place; it's a community built on innovation, openness, and mutual growth.
+    </p>
+    <div class="mt-6">
+      <a href="/about" class="text-green-700 font-semibold">Learn More</a>
+    </div>
+  </div>
 </section>
 
+<!-- Current Projects -->
+<section id="projects" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-800 text-center">Current Projects</h2>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Project 1: NFT Museum -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">NFT Museum</h3>
+        <p class="mt-4 text-gray-700">Collaborating with artists and curators to bring digital art to life and engage the community through NFTs.</p>
+        <div class="mt-4 text-center">
+          <a href="/projects/nft-museum" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Explore Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2: Cosmolocal -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">Cosmolocal</h3>
+        <p class="mt-4 text-gray-700">Exploring the balance between local production and global networks. Launching in May to create new connections.</p>
+        <div class="mt-4 text-center">
+          <a href="/projects/cosmolocal" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Explore Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3: Local Entrepreneur Onboarding -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">Local Entrepreneur Onboarding</h3>
+        <p class="mt-4 text-gray-700">Supporting local businesses in Amsterdam to connect with the global blockchain community and adopt new technologies.</p>
+        <div class="mt-4 text-center">
+          <a href="/projects/onboarding" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Explore Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get Involved -->
+<section id="get-started" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-green-800">Get Involved</h2>
+    <p class="mt-4 text-lg text-gray-700">The Playground is open to creators, entrepreneurs, and everyone in between. Whether you want to start a project, join a community, or contribute to ongoing work, we welcome you!</p>
+    <div class="mt-8">
+      <a href="/get-involved" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-600 transition duration-300">Join the Playground</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Stories & Podcasts -->
+<section id="stories" class="py-16">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-green-800">Stories & Podcasts</h2>
+    <p class="mt-4 text-lg text-gray-700">Hear from our community of creators, artists, and thought leaders. Discover their journeys, challenges, and insights.</p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Story 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">Artist Spotlight: Nima</h3>
+        <p class="mt-4 text-gray-700">Discover Nima’s creative process and how she uses blockchain technology to create immersive art experiences.</p>
+        <div class="mt-4 text-center">
+          <a href="/stories/nima" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Read Story</a>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">The Future of DAOs</h3>
+        <p class="mt-4 text-gray-700">Learn from experts about how DAOs (Decentralized Autonomous Organizations) are shaping the future of governance and collaboration.</p>
+        <div class="mt-4 text-center">
+          <a href="/stories/daos" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Listen to Podcast</a>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-green-800">Cosmolocalism: Bridging Local and Global</h3>
+        <p class="mt-4 text-gray-700">Explore how cosmolocalism fosters mutual knowledge sharing between local and global networks.</p>
+        <div class="mt-4 text-center">
+          <a href="/stories/cosmolocalism" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold">Read Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <section className="hidden bg-gray-800 text-center py-16">
+    <h2 className="text-3xl font-semibold">Community Voices</h2>
+    <div className="mt-8 max-w-3xl mx-auto">
+      <p className="text-xl italic">"  A decentralized space where art, crypto, and community evolve naturally. No roadmap, no force—just movement."</p>
+      <p className="mt-4 text-gray-400">- A Entrepeneur</p>
+      <p className="text-xl italic">"I arrived here with no plan, and now we're building something extraordinary together."</p>
+      <p className="mt-4 text-gray-400">- A participant</p>
+      <p className="text-xl italic mt-8">"The Playground breathes freedom. Nothing is forced, everything flows."</p>
+      <p className="mt-4 text-gray-400">- An artist</p>
+    </div>
+  </section>

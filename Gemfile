@@ -71,3 +71,5 @@ end
 
 gem "tailwindcss-rails", "~> 2.3"
 
+
+gem "tailwindcss-ruby", "~> 4.0"

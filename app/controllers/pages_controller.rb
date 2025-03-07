@@ -3,6 +3,27 @@ class PagesController < ApplicationController
 	def home
 	end
 
+	def get_involved
+	end
+
+	def start_a_project
+	end
+
+	def explore
+	end
+
+	def communities
+	end
+
+	def live
+	end
+
+	def events
+	end
+
+	def stories
+	end
+
 	def who_we_are
 	end
 
@@ -15,13 +36,14 @@ class PagesController < ApplicationController
 	def privacy
 	end
 
-	def calendar
-		to_url = "https://lu.ma/playground.amsterdam"
-		redirect_to to_url, allow_other_host: true 
+	def governance
 	end
 
-	def featured
-		to_url = "https://lu.ma/euampoxr"
+	def token
+	end
+
+	def calendar
+		to_url = "https://lu.ma/playground.amsterdam"
 		redirect_to to_url, allow_other_host: true 
 	end
 
