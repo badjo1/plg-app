@@ -1,6 +1,6 @@
 <% content_for :hero do %>
   <!-- Responsive Image with Title Overlay -->
-  <div class="relative mx-auto mb-8">
+  <div class="relative mx-auto mb-8 min-h-48">
       <div class="absolute -top-0 left-0 w-full flex justify-center z-10">
         <div class="w-64 h-64 bg-transparent flex items-center justify-center text-center text-white font-mono font-bold" style="font-size: 4rem; line-height: 1.2;">
           <div>
@@ -16,6 +16,8 @@
           </div>
         </div>
       </div>
-      <%=  image_tag(image, alt: "", class: "w-full object-cover sm:w-auto sm:h-[75vh] mx-auto", loading: "lazy")  %>
+      <% if defined?(image) && image.length > 0 %>
+        <%=  image_tag(image, alt: "", class: "w-full object-cover sm:w-auto sm:h-[75vh] mx-auto", loading: "lazy")  %>
+      <% end %>
   </div>
 <% end %>
