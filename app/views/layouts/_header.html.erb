@@ -21,7 +21,7 @@
 
         <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
         <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <%= link_to t('global.menu.stories'), stories_path, class: "text-lg" %>
+          <%= link_to t('global.menu.stories'), explore_path, class: "text-lg" %>
           <%= link_to t('global.menu.Events'), events_path, class: "text-lg" %>
           <% I18n.available_locales.each do |locale| %>
             <% if I18n.locale == locale %>
@@ -50,8 +50,8 @@
     <div class="container mx-auto p-6 bg-light-green">
       <nav class="flex flex-col items-end space-y-6 text-2xl ">
         <a href="#"><%= t 'globlal.menu.home' %></a>
-        <a href="https://nftplayground.amsterdam/podcast/"><%= t 'globlal.menu.podcast' %></a>
-        <a href="https://lu.ma/nftplayground"><%= t 'globlal.menu.calendar' %></a>
+        <%= link_to t('global.menu.stories'), explore_path, class: "" %>
+          <%= link_to t('global.menu.calendar'), events_path, class: "" %>
         <a href="#"><%= t 'globlal.menu.contact' %></a>
       </nav>
     </div>

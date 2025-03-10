@@ -42,6 +42,9 @@ class PagesController < ApplicationController
 	def token
 	end
 
+	def members
+	end
+
 	def calendar
 		to_url = "https://lu.ma/playground.amsterdam"
 		redirect_to to_url, allow_other_host: true 

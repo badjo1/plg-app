@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     get :privacy, to: "pages#privacy", as: "privacy"
     get :calendar, to: "pages#calendar", as: "calendar"
     get :featured, to: "pages#featured", as: "featured"
+    get :members, to: "pages#members", as: "members"
     get :governance, to: "pages#governance", as: "governance"
     get :token, to: "pages#token", as: "token"
     root "pages#home"
