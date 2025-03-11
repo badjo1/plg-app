@@ -14,9 +14,7 @@
     <p class="mt-2 text-gray-600">Schrijf je in via Luma en mis niets!</p>
     
     <div class="mt-6 text-center">
-      <a href="https://lu.ma/playground.amsterdam" target="_blank" class="bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold">
-        Bekijk Events op Luma
-      </a>
+      <%= render 'layouts/button', text: "Bekijk Events op Luma", href: "https://lu.ma/playground.amsterdam", style: "green" %>
     </div>
   </div>
 </section>
@@ -55,11 +53,11 @@
 <section class="py-12 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-green-700">💡 Wil je een event organiseren?</h2>
-    <p class="mt-2 text-gray-600">
+    <p class="mt-2 text-gray-600 mb-6">
       De Playground is een plek voor experiment en ontmoeting. Heb je een idee voor een event? Laat het ons weten!
     </p>
-    <button class="mt-6 bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold">
-      Organiseer een Event
-    </button>
+    <%= render 'layouts/button', text: t('.organiseer_een_event'), href: "https://docs.google.com/document/d/1g7sdlpxTukBHD08wLUFuEhzYblus7NRHI_qSSM3TK3g/edit?usp=sharing", style: "green" %>
+    
+
   </div>
 </section>

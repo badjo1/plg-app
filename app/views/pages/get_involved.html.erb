@@ -14,14 +14,13 @@
   </div>
 </section>
 
-
 <section class="py-12">
-  <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+  <div class="max-w-4xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
     
     <!-- Create Something -->
     <div class="bg-white shadow-lg p-6 rounded-lg">
       <h3 class="text-xl font-bold text-green-700">🚀 Create & Experiment</h3>
-      <p class="mt-2 text-gray-600">
+      <p class="text-gray-600 mb-4">
         Launch your own NFT, DAO, or experiment with new ideas. The space is yours to explore.
       </p>
       <%= render 'layouts/button', text: t('.start_a_project'), href: get_involved_path %>
@@ -30,16 +29,16 @@
     <!-- Explore & Observe -->
     <div class="bg-white shadow-lg p-6 rounded-lg">
       <h3 class="text-xl font-bold text-green-700">🔍 Discover & Connect</h3>
-      <p class="mt-2 text-gray-600">
+      <p class="text-gray-600  mb-4">
         Wander through the Playground, check out live projects, and experience digital art.
       </p>
       <%= render 'layouts/button', text: t('.explore'), href: get_involved_path %>
     </div>
 
     <!-- Join the Community -->
-    <div class="bg-white shadow-lg p-6 rounded-lg">
+    <div class="bg-white shadow-lg p-6 rounded-lg sm:col-span-2 lg:col-span-1">
       <h3 class="text-xl font-bold text-green-700">🤝 Co-Create & Contribute</h3>
-      <p class="text-gray-600">
+      <p class="text-gray-600 mb-4">
         Meet creators, share knowledge, and help shape the Playground together.
       </p>
       <%= render 'layouts/button', text: t('.join_a_community'), href: get_involved_path %>

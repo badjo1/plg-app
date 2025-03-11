@@ -1,7 +1,10 @@
-<% style ||= "bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-700" %>
+<% style ||= "bg-green-700 text-white hover:bg-green-800 focus:bg-green-600" %>
 <% style = "bg-gray-300 text-gray-900 hover:bg-gray-400 focus:bg-gray-500" if style == "grey" %>
+<% style = "bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-700" if style == "blue" %>
 
-<%= link_to href, class: "w-full sm:w-auto px-4 py-2 rounded text-center  hover:no-underline whitespace-nowrap #{style}", aria: { label: text } do %>
+<% size = (size == nil) ? "px-6 py-3 rounded-full  text-lg font-semibold" : "px-4 py-2 rounded-lg"  %>
+
+<%= link_to href, target: (href.start_with?("http") ? "_blank" : nil), class: "w-full sm:w-auto px-6 py-3 rounded text-center  hover:no-underline whitespace-nowrap #{size} #{style}", aria: { label: text }  do %>
   <!-- room for icon height 15 -->
   <%= text %>
 <% end %>
