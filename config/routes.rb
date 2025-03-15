@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  
+  # Add www with redirect but only on production
+  if Rails.env.production?
+    constraints subdomain: false do
+      get ":any", to: redirect(subdomain: "www", path: "/%{any}"), any: /.*/
+      root to: redirect(subdomain: "www", path: "/"), as: :non_www_root
+    end
+  end
+  
   resource :session
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
