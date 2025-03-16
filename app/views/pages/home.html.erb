@@ -1,25 +1,16 @@
 
-
-
-  
+<% content_for :hero do %>
   <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
-  <div class="max-w-7xl mx-auto text-center px-6">
-    <h1 class="text-5xl font-bold leading-tight">Welcome to the Playground</h1>
-    <p class="mt-4 text-xl">Where creativity, technology, and community collide to build the future.</p>
-    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"">
-      <%= render 'layouts/button', text: t('.get_involved'), href: get_involved_path %>
-      <%= render 'layouts/button', text: t('.explore'), href: explore_path, style: "grey"%>
+    <div class="max-w-7xl mx-auto text-center px-6">
+      <h1 class="text-5xl font-bold leading-tight">Welcome to the Playground</h1>
+      <p class="mt-4 text-xl">Where creativity, technology, and community collide to build the future.</p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"">
+        <%= render 'layouts/button', text: t('.get_involved'), href: get_involved_path %>
+        <%= render 'layouts/button', text: t('.explore'), href: explore_path, style: "blue"%>
+      </div>
     </div>
-    <!--
-    <div class="mt-8">
-      <a href="#get-started" class="bg-white text-green-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">Get Started</a>
-      
-
-    </div>
-    -->
-  </div>
-</section>
-
+  </section>
+<% end %>
 <!-- About the Playground -->
 <section id="about" class="py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6 text-center">
