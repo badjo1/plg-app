@@ -1,23 +1,15 @@
-<section class="py-16 bg-gray-100">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-4xl font-bold text-green-800">🎟️ Events in de Playground</h1>
-    <p class="mt-4 text-gray-700 text-lg">
-      Van meetups tot exposities—ontdek wat er speelt in de Playground en doe mee!
-    </p>
-  </div>
-</section>
-
-<!-- Aankomende Events -->
-<section class="py-12">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">📅 Aankomende Events</h2>
-    <p class="mt-2 text-gray-600">Schrijf je in via Luma en mis niets!</p>
-    
-    <div class="mt-6 text-center">
-      <%= render 'layouts/button', text: "Bekijk Events op Luma", href: "https://lu.ma/playground.amsterdam", style: "green" %>
+<% content_for :hero do %>
+  <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+      <h1 class="text-5xl font-bold leading-tight">Events in de Playground</h1>
+      <p class="mt-4 text-xl">      Van meetups tot exposities—ontdek wat er speelt in de Playground en doe mee!</p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"">
+      <%= render 'layouts/button', text: "Bekijk Events op Luma", href: "https://lu.ma/playground.amsterdam" %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
+
 
 <!-- Vorige Events -->
 <section class="py-12 bg-white">
