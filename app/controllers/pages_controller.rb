@@ -50,4 +50,9 @@ class PagesController < ApplicationController
 		redirect_to to_url, allow_other_host: true 
 	end
 
+	def crypto_art_friends
+		to_url = "https://caf-expo.vercel.app"
+		redirect_to to_url, allow_other_host: true 
+	end
+
 end
