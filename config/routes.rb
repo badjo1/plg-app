@@ -40,7 +40,7 @@ Rails.application.routes.draw do
     get :token, to: "pages#token", as: "token"
     get :cryptoartfriend, to: "pages#cryptoartfriend", as: "cryptoartfriend"
     get "crypto-art-friends", to: "pages#crypto_art_friends", as: "crypto_art_friends"
-    get "become-crypto-art-friends", to: "pages#become_a_crypto_art_friend", as: "become_a_crypto_art_friend"
+    get "become-crypto-art-friend", to: "pages#become_a_crypto_art_friend", as: "become_a_crypto_art_friend"
     root "pages#home"
   end
 end
