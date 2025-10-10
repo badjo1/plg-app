@@ -39,6 +39,8 @@ Rails.application.routes.draw do
     get :governance, to: "pages#governance", as: "governance"
     get :token, to: "pages#token", as: "token"
     get :cryptoartfriend, to: "pages#cryptoartfriend", as: "cryptoartfriend"
+    get "crypto-art-friends", to: "pages#crypto_art_friends", as: "crypto_art_friends"
+    get "become-crypto-art-friends", to: "pages#become_a_crypto_art_friend", as: "become_a_crypto_art_friend"
     root "pages#home"
   end
 end

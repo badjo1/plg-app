@@ -45,6 +45,9 @@ class PagesController < ApplicationController
 	def members
 	end
 
+	def cryptoartfriends
+	end
+
 	def calendar
 		to_url = "https://lu.ma/playground.amsterdam"
 		redirect_to to_url, allow_other_host: true 
@@ -52,6 +55,11 @@ class PagesController < ApplicationController
 
 	def cryptoartfriend
 		to_url = "https://caf-expo.vercel.app"
+		redirect_to to_url, allow_other_host: true 
+	end
+
+	def become_a_crypto_art_friend
+		to_url = "https://manifold.xyz/@crypto-art-museum/id/4133284080"
 		redirect_to to_url, allow_other_host: true 
 	end
 
