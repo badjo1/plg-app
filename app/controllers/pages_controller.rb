@@ -54,7 +54,7 @@ class PagesController < ApplicationController
 	end
 
 	def cryptoartfriend
-		to_url = "https://caf-expo.vercel.app"
+		to_url = "https://manifold.xyz/@crypto-art-museum/id/4133284080"
 		redirect_to to_url, allow_other_host: true 
 	end
 
