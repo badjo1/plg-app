@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     get :cryptoartfriend, to: "pages#cryptoartfriend", as: "cryptoartfriend"
     get "crypto-art-friends", to: "pages#crypto_art_friends", as: "crypto_art_friends"
     get "become-crypto-art-friend", to: "pages#become_a_crypto_art_friend", as: "become_a_crypto_art_friend"
+    get "current-exhibition", to: "pages#current_exhibition", as: "current_exhibition"
     root "pages#home"
   end
 end
