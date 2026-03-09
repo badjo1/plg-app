@@ -54,17 +54,17 @@ class PagesController < ApplicationController
 	end
 
 	def cryptoartfriend
-		to_url = "https://www.roosaldershoff.com/expositie/mina-gallery-crypto-art-museum-in-amsterdam/"
+		to_url = "https://www.artcrush.com/"
 		redirect_to to_url, allow_other_host: true 
 	end
 
 	def become_a_crypto_art_friend
-		to_url = "https://www.roosaldershoff.com/expositie/mina-gallery-crypto-art-museum-in-amsterdam/"
+		to_url = "https://www.artcrush.com/"
 		redirect_to to_url, allow_other_host: true 
 	end
 
 	def current_exhibition
-		to_url = "https://www.roosaldershoff.com/expositie/mina-gallery-crypto-art-museum-in-amsterdam/"
+		to_url = "https://www.artcrush.com/"
 		redirect_to to_url, allow_other_host: true 
 	end
 
