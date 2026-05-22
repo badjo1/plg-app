@@ -42,6 +42,9 @@ class PagesController < ApplicationController
 	def token
 	end
 
+	def circles
+	end
+
 	def members
 	end
 

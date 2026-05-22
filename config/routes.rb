@@ -38,6 +38,7 @@ Rails.application.routes.draw do
     get :members, to: "pages#members", as: "members"
     get :governance, to: "pages#governance", as: "governance"
     get :token, to: "pages#token", as: "token"
+    get :circles, to: "pages#circles", as: "circles"
     get :cryptoartfriend, to: "pages#cryptoartfriend", as: "cryptoartfriend"
     get "crypto-art-friends", to: "pages#crypto_art_friends", as: "crypto_art_friends"
     get "become-crypto-art-friend", to: "pages#become_a_crypto_art_friend", as: "become_a_crypto_art_friend"
