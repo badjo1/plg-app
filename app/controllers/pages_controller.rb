@@ -43,6 +43,7 @@ class PagesController < ApplicationController
 	end
 
 	def circles
+		render layout: "landing"
 	end
 
 	def members
