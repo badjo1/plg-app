@@ -46,6 +46,10 @@ class PagesController < ApplicationController
 		render layout: "landing"
 	end
 
+	def explorer
+		render layout: "landing"
+	end
+
 	def members
 	end
 
