@@ -8,6 +8,15 @@ Rails.application.routes.draw do
     end
   end
   
+  # Subdomains: explorer.playground.amsterdam / dashboard.playground.amsterdam
+  constraints subdomain: "explorer" do
+    root to: "pages#explorer", as: :explorer_root
+  end
+
+  constraints subdomain: "dashboard" do
+    root to: "pages#explorer", as: :dashboard_root
+  end
+
   resource :session
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
