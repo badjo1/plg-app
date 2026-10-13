@@ -2,16 +2,27 @@
 <% content_for :hero do %>
 <section class="relative mx-auto max-w-5xl px-6 pb-8 pt-10 sm:px-10 sm:pt-16">
   <!-- Doodles -->
-  <div class="doodle absolute -left-28 top-24 hidden h-52 w-52 rounded-full bg-leaf lg:block"></div>
-  <div class="doodle hand absolute right-0 top-28 hidden rotate-6 text-2xl leading-tight xl:block">Good things<br>happen here ♡</div>
-  <div class="doodle absolute -right-24 top-[28rem] hidden h-56 w-56 rounded-full bg-accent lg:block"></div>
-  <div class="doodle absolute left-2 top-[37rem] hidden text-6xl md:block">✳</div>
+  <div class="doodle absolute -left-24 top-24 hidden h-72 w-72 rounded-full bg-leaf lg:block"></div>
+  <div class="doodle absolute -right-20 top-[30rem] hidden h-64 w-64 rounded-full bg-accent lg:block"></div>
+
+  <!-- Hand-drawn welcoming hand -->
+  <svg class="doodle absolute left-0 top-40 hidden w-44 text-forest lg:block"
+       viewBox="0 0 180 180" aria-label="A playful welcoming hand">
+    <path class="sketch" d="M12 140 L40 137 Q66 133 90 116 L119 102 Q132 96 128 88 Q125 80 114 84 L88 94 L114 76 Q125 69 119 62 Q115 56 106 61 L75 80 L98 58 Q107 50 101 44 Q95 38 86 45 L58 69 L73 48 Q80 39 74 34 Q68 28 61 36 L39 62 L12 96"/>
+    <path class="sketch" d="M31 74 L24 88 M42 59 L38 74 M130 38 L145 22 M140 56 L161 51 M132 21 L134 9"/>
+  </svg>
+
+  <!-- Hand-drawn sprout -->
+  <svg class="doodle absolute -right-4 top-[35rem] hidden w-28 text-forest lg:block"
+       viewBox="0 0 100 150" aria-label="A growing plant">
+    <path class="sketch" d="M48 140 Q52 99 48 62 M49 91 Q20 83 18 56 Q43 57 49 83 M50 70 Q51 35 79 21 Q84 49 52 68 M49 116 Q27 107 18 91 M20 12 L24 20 M9 29 L17 31 M76 5 L73 14 M91 28 L82 30"/>
+  </svg>
 
   <!-- Hero -->
   <div class="relative z-10 mx-auto max-w-2xl text-center">
     <p class="section-label mb-4">A little space for possibility</p>
     <h1 class="hand text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-      What brings you<br>to the <span class="relative inline-block">Playground<span class="absolute -bottom-1 left-0 h-2 w-full -rotate-2 rounded-full bg-accent"></span></span>?
+      What brings you<br>to the <span class="relative inline-block">Playground<svg class="absolute -bottom-3 left-[4%] w-[94%] text-accent" viewBox="0 0 400 24" aria-hidden="true"><path d="M5 18 Q180 -2 395 9" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span>?
     </h1>
     <p class="mx-auto mt-8 max-w-xl text-base leading-7 sm:text-lg">
       <%= t('.hero_subtitle', default: "Follow your curiosity. Bring an idea. Meet someone unexpected.") %><br class="hidden sm:block">
@@ -195,32 +206,53 @@
 
 <!-- Values -->
 <section class="py-12">
-  <div class="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center sm:grid-cols-5 sm:gap-5" aria-label="Playground values">
-    <div>
-      <div class="hand text-4xl">↝</div>
-      <h3 class="section-label mt-2">Freedom</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Move where<br>inspiration takes you.</p>
-    </div>
-    <div>
-      <div class="hand text-4xl">◎</div>
-      <h3 class="section-label mt-2">Curiosity</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Discover what<br>sparks your mind.</p>
-    </div>
-    <div>
-      <div class="hand text-4xl">♡</div>
-      <h3 class="section-label mt-2">Welcome</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Feel at home.<br>Help others do too.</p>
-    </div>
-    <div>
-      <div class="hand text-4xl">〰</div>
-      <h3 class="section-label mt-2">Meeting</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Let the Ki flow<br>and resonate.</p>
-    </div>
-    <div>
-      <div class="hand text-4xl">✿</div>
-      <h3 class="section-label mt-2">Meaning</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Pass something<br>on — together.</p>
-    </div>
+  <div class="mx-auto grid max-w-5xl grid-cols-2 gap-x-6 gap-y-10 text-center sm:grid-cols-5 sm:gap-8" aria-label="Playground values">
+
+    <article>
+      <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
+        <path class="sketch" d="M30 9 Q18 10 18 21 Q18 29 30 30 Q42 29 42 21 Q42 10 30 9 M30 30 L20 50 M30 30 L40 50 M10 18 L5 14 M50 18 L55 14"/>
+        <path d="M24 15 Q21 22 29 25" fill="none" stroke="#80d455" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <h3 class="section-label mt-3">Freedom</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Move between places that inspire you.</p>
+    </article>
+
+    <article>
+      <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
+        <path class="sketch" d="M5 30 Q30 4 55 30 Q30 56 5 30 Z"/>
+        <circle cx="30" cy="30" r="9" class="sketch"/>
+        <path d="M30 5 V2 M12 12 L9 9 M48 12 L51 9" stroke="#c8cb43" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <h3 class="section-label mt-3">Curiosity</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Discover what sparks your imagination.</p>
+    </article>
+
+    <article>
+      <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
+        <path d="M30 51 S5 35 9 19 Q13 5 27 17 L30 21 L34 16 Q49 7 53 21 Q57 35 30 51 Z" fill="#e7e76b" stroke="#064e3b" stroke-width="3"/>
+        <path class="sketch" d="M18 29 L26 37 L42 19"/>
+      </svg>
+      <h3 class="section-label mt-3">Welcome</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Feel at home. Help others do too.</p>
+    </article>
+
+    <article>
+      <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
+        <path class="sketch" d="M6 22 Q18 7 30 22 T54 22 M6 31 Q18 16 30 31 T54 31 M6 40 Q18 25 30 40 T54 40 M15 15 L11 10 M45 45 L49 50 M30 9 V4"/>
+      </svg>
+      <h3 class="section-label mt-3">Meeting</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Let the Ki flow and resonate.</p>
+    </article>
+
+    <article>
+      <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
+        <path d="M30 54 V28 M30 37 Q9 35 11 13 Q28 14 30 32 M30 29 Q32 7 50 7 Q51 26 30 29" fill="none" stroke="#064e3b" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M30 54 V28 M30 37 Q9 35 11 13 Q28 14 30 32 M30 29 Q32 7 50 7 Q51 26 30 29" fill="none" stroke="#80d455" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h3 class="section-label mt-3">Meaning</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Pass something on — together.</p>
+    </article>
+
   </div>
 </section>
 
