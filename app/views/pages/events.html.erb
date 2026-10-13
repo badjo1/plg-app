@@ -1,3 +1,4 @@
+<% content_for :grid_word do %>HAPPENING<% end %>
 <% content_for :hero do %>
   <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
     <div class="max-w-7xl mx-auto text-center px-6">
@@ -12,34 +13,34 @@
 
 
 <!-- Vorige Events -->
-<section class="py-12 bg-white">
+<section class="py-12 bg-white/50">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">⏳ Vorige Events</h2>
-    <p class="mt-2 text-gray-600">Bekijk welke events we al hebben georganiseerd.</p>
+    <h2 class="text-3xl font-bold text-forest">⏳ Vorige Events</h2>
+    <p class="mt-2 text-muted">Bekijk welke events we al hebben georganiseerd.</p>
     
     <div class="grid md:grid-cols-2 gap-6 mt-6">
       <!-- Event 1 -->
-      <div class="bg-gray-50 shadow-lg p-6 rounded-lg">
+      <div class="bg-cream shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">NFT Season Kickoff</h3>
-        <p class="text-gray-500">Een avond vol digitale kunst en blockchain innovatie.</p>
-        <a href="https://lu.ma/sug833s5" target="_blank" class="mt-4 text-green-700 font-semibold inline-block">Bekijk op Luma →</a>
+        <p class="text-muted">Een avond vol digitale kunst en blockchain innovatie.</p>
+        <a href="https://lu.ma/sug833s5" target="_blank" class="mt-4 text-forest font-semibold inline-block">Bekijk op Luma →</a>
       </div>
 
       <!-- Event 2 -->
-      <div class="bg-gray-50 shadow-lg p-6 rounded-lg">
+      <div class="bg-cream shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Wondermarkt</h3>
-        <p class="text-gray-500">Verhalen, muziek, kraampje en Web3-discussies in de binnentuin.</p>
-        <a href="https://lu.ma/euampoxr" target="_blank" class="mt-4 text-green-700 font-semibold inline-block">Bekijk op Luma →</a>
+        <p class="text-muted">Verhalen, muziek, kraampje en Web3-discussies in de binnentuin.</p>
+        <a href="https://lu.ma/euampoxr" target="_blank" class="mt-4 text-forest font-semibold inline-block">Bekijk op Luma →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Zelf een Event Organiseren -->
-<section class="py-12 bg-gray-50">
+<section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-700">💡 Wil je een event organiseren?</h2>
-    <p class="mt-2 text-gray-600 mb-6">
+    <h2 class="text-3xl font-bold text-forest">💡 Wil je een event organiseren?</h2>
+    <p class="mt-2 text-muted mb-6">
       De Playground is een plek voor experiment en ontmoeting. Heb je een idee voor een event? Laat het ons weten!
     </p>
     <%= render 'layouts/button', text: t('.organiseer_een_event'), href: "https://docs.google.com/document/d/1g7sdlpxTukBHD08wLUFuEhzYblus7NRHI_qSSM3TK3g/edit?usp=sharing", style: "green" %>

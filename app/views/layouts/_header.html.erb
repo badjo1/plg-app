@@ -1,74 +1,65 @@
-  <!-- Header Section -->
-  <header class="bg-yellow">
-    <div id="menu-toggle" class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <!-- Logo -->
-        <a href="/" class="text-light-green text-2xl font-bold">Playground Amsterdam</a>
+<header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-7 sm:px-10">
+  <a href="<%= root_path %>" class="leading-none hover:no-underline" aria-label="Playground Amsterdam home">
+    <span class="hand block text-3xl font-bold tracking-tight sm:text-4xl">PLAYGROUND</span>
+    <span class="mt-2 block pl-8 text-xs font-bold uppercase tracking-[.34em]">Amsterdam</span>
+  </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <div class="block lg:hidden">
-          <button id="menu-btn" class="order rounded focus:outline-none">
-            <svg id="hamburger-icon" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="close-icon" class="w-8 h-8 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
+  <!-- Desktop nav -->
+  <nav class="hidden items-center gap-6 text-sm font-semibold sm:flex">
+    <%= link_to t('global.menu.stories'), explore_path %>
+    <%= link_to t('global.menu.Events'), events_path %>
+    <% I18n.available_locales.each do |locale| %>
+      <% unless I18n.locale == locale %>
+        <%= link_to url_for(locale: locale) do %>
+          <span class="flex items-center gap-1">
+            <%= image_tag("flag_#{locale}.png", width: "16", height: "11", alt: t(locale, scope: 'locales'), loading: "lazy") %>
+            <span><%= t(locale, scope: 'locales') %></span>
+          </span>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if authenticated? %>
+      <%= button_to t('global.menu.logout'), session_path, method: :delete, class: "btn-secondary !px-4 !py-2 !text-xs" %>
+    <% else %>
+      <%= link_to t('global.menu.login'), new_session_path, class: "btn-primary !px-4 !py-2 !text-xs" %>
+    <% end %>
+  </nav>
 
-        </div>
-
-        <!-- Navigation Links (hidden on mobile, shown on larger screens) -->
-        <nav id="nav-menu" class="hidden lg:flex space-x-6">
-          <%= link_to t('global.menu.stories'), explore_path, class: "text-lg" %>
-          <%= link_to t('global.menu.Events'), events_path, class: "text-lg" %>
-          <% I18n.available_locales.each do |locale| %>
-            <% if I18n.locale == locale %>
-              <!-- do nothing -->
-            <% else %>
-              <%= link_to url_for(locale:locale), class: "text-lg" do %>
-                <div class="flex items-center text-nowrap">
-                  <%=  image_tag("flag_#{locale}.png", width: "16", height: "11", alt: "flag-icon", class: "flex-none", loading: "lazy")  %>
-                  <span class="ml-2"><%= t(locale, scope: 'locales') %></span>
-                </div>
-              <% end %>
-            <% end %>
-          <% end %>
-          <% if authenticated? %>
-            <%= button_to "t('global.menu.logout'), #{Current.user.email_address }", session_path, method: :delete, class: "text-lg " %>
-          <% else %>
-             <%= link_to t('global.menu.login'), new_session_path, class: "text-lg" %>
-          <% end %>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <!-- Mobile Menu (hidden on larger screens) -->
-
-  <div id="mobile-menu" class="hidden lg:hidden">
-    <div class="container  mx-auto px-4 sm:px-6 lg:px-8 p-6 bg-light-green">
-      <nav class="flex flex-col items-end space-y-6 text-2xl ">
-        <a href="#"><%= t 'globlal.menu.home' %></a>
-        <%= link_to t('global.menu.stories'), explore_path, class: "" %>
-          <%= link_to t('global.menu.calendar'), events_path, class: "" %>
-        <a href="#"><%= t 'globlal.menu.contact' %></a>
-      </nav>
-    </div>
+  <!-- Mobile menu button -->
+  <div class="block sm:hidden">
+    <button id="menu-btn" class="rounded p-2 focus:outline-none" aria-label="Toggle menu">
+      <svg id="hamburger-icon" class="h-7 w-7 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg id="close-icon" class="hidden h-7 w-7 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
   </div>
+</header>
 
-  <!-- JavaScript for Menu Toggle -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden sm:hidden">
+  <nav class="mx-auto flex max-w-7xl flex-col gap-4 px-6 pb-6 text-lg font-semibold">
+    <%= link_to t('global.menu.stories'), explore_path %>
+    <%= link_to t('global.menu.Events'), events_path %>
+    <% if authenticated? %>
+      <%= button_to t('global.menu.logout'), session_path, method: :delete %>
+    <% else %>
+      <%= link_to t('global.menu.login'), new_session_path, class: "btn-primary text-center" %>
+    <% end %>
+  </nav>
+</div>
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      hamburgerIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  </script>
+<script>
+  const menuToggle = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
 
-
-
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+</script>

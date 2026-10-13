@@ -1,7 +1,8 @@
-<section class="py-16 bg-gray-100">
+<% content_for :grid_word do %>DISCOVERY<% end %>
+<section class="py-16 bg-cream">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-4xl font-bold text-green-800">Explore the Playground</h1>
-    <p class="mt-4 text-gray-700 text-lg">
+    <h1 class="text-4xl font-bold text-forest">Explore the Playground</h1>
+    <p class="mt-4 text-muted text-lg">
       Discover art, projects, and stories from the Playground community.
     </p>
   </div>
@@ -10,41 +11,41 @@
 <!-- Kunst - Permanente collectie -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">🎨 Art Collection</h2>
-    <p class="mt-2 text-gray-600">A permanent collection of digital and physical artworks curated within the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest">🎨 Art Collection</h2>
+    <p class="mt-2 text-muted">A permanent collection of digital and physical artworks curated within the Playground.</p>
     <div class="grid md:grid-cols-3 gap-6 mt-6">
-      <div class="bg-white shadow-lg p-6 rounded-lg">
-        <img src="artwork1.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
+        <img src="artwork1.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-2xl">
         <h3 class="text-xl font-semibold mt-4">Featured Artwork</h3>
-        <p class="text-gray-500">Explore NFT and digital art pieces from our collection.</p>
+        <p class="text-muted">Explore NFT and digital art pieces from our collection.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
-        <img src="artwork2.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
+        <img src="artwork2.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-2xl">
         <h3 class="text-xl font-semibold mt-4">Curated Artists</h3>
-        <p class="text-gray-500">Meet the artists shaping the future of digital creativity.</p>
+        <p class="text-muted">Meet the artists shaping the future of digital creativity.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
-        <img src="exhibition.jpg" alt="Exhibition" class="w-full h-48 object-cover rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
+        <img src="exhibition.jpg" alt="Exhibition" class="w-full h-48 object-cover rounded-2xl">
         <h3 class="text-xl font-semibold mt-4">Ongoing Exhibitions</h3>
-        <p class="text-gray-500">Visit our latest curated exhibitions in the Playground.</p>
+        <p class="text-muted">Visit our latest curated exhibitions in the Playground.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Projecten - De Playground verkennen -->
-<section class="py-12 bg-gray-50">
+<section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">🚀 Explore Projects</h2>
-    <p class="mt-2 text-gray-600">Discover active projects happening inside the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest">🚀 Explore Projects</h2>
+    <p class="mt-2 text-muted">Discover active projects happening inside the Playground.</p>
     <div class="grid md:grid-cols-2 gap-6 mt-6">
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Live Experiments</h3>
-        <p class="text-gray-500">Follow decentralized experiments and blockchain prototypes.</p>
+        <p class="text-muted">Follow decentralized experiments and blockchain prototypes.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Collaborative Builds</h3>
-        <p class="text-gray-500">Join forces with makers and developers on community-driven projects.</p>
+        <p class="text-muted">Join forces with makers and developers on community-driven projects.</p>
       </div>
     </div>
   </div>
@@ -53,42 +54,63 @@
 <!-- Verhalen - De community vinden -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">📖 Community Stories</h2>
-    <p class="mt-2 text-gray-600">Read about the people shaping the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest">📖 Community Stories</h2>
+    <p class="mt-2 text-muted">Read about the people shaping the Playground.</p>
+
+    <!-- Featured: Walenweeshuis -->
+    <%= link_to stories_path, class: "mt-6 block intent-card hover:no-underline" do %>
+      <div class="flex flex-col sm:flex-row gap-5 items-start">
+        <div class="relative w-full sm:w-48 shrink-0 overflow-hidden rounded-xl" style="aspect-ratio:16/9;">
+          <iframe
+            src="https://iframe.mediadelivery.net/embed/460478/8a50afbd-7e31-4d00-8f37-cb5c79a5d54d?autoplay=false&preload=false"
+            loading="lazy"
+            style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;"
+            tabindex="-1">
+          </iframe>
+        </div>
+        <div>
+          <span class="section-label text-muted">Featured Story</span>
+          <h3 class="mt-1 text-xl font-bold">Three Years in the Walenweeshuis</h3>
+          <p class="mt-1 text-sm text-muted">From May 2022 to August 2025, the NFT Playground called the Walenweeshuis home. A recap of what we built together.</p>
+          <span class="mt-2 inline-flex items-center gap-1 text-sm font-bold text-forest">Watch & read <span aria-hidden="true">→</span></span>
+        </div>
+      </div>
+    <% end %>
+
     <div class="grid md:grid-cols-3 gap-6 mt-6">
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Founder Insights</h3>
-        <p class="text-gray-500">Meet the visionaries behind Playground projects.</p>
+        <p class="text-muted">Meet the visionaries behind Playground projects.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Podcast Episodes</h3>
-        <p class="text-gray-500">Listen to conversations with creators and innovators.</p>
+        <p class="text-muted">Listen to conversations with creators and innovators.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Community Spotlights</h3>
-        <p class="text-gray-500">Discover members making an impact.</p>
+        <p class="text-muted">Discover members making an impact.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Spaces in de Playground -->
-<section class="py-12 bg-gray-50">
+<section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-700">🏢 Spaces in the Playground</h2>
-    <p class="mt-2 text-gray-600">Find your place within the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest">🏢 Spaces in the Playground</h2>
+    <p class="mt-2 text-muted">Find your place within the Playground.</p>
     <div class="grid md:grid-cols-3 gap-6 mt-6">
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">The NFT Museum</h3>
-        <p class="text-gray-500">A dedicated space for digital and blockchain-based art.</p>
+        <p class="text-muted">A dedicated space for digital and blockchain-based art.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Co-Creation Labs</h3>
-        <p class="text-gray-500">Spaces for collaboration, brainstorming, and prototyping.</p>
+        <p class="text-muted">Spaces for collaboration, brainstorming, and prototyping.</p>
       </div>
-      <div class="bg-white shadow-lg p-6 rounded-lg">
+      <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
         <h3 class="text-xl font-semibold">Event Hall</h3>
-        <p class="text-gray-500">Host and attend live talks, workshops, and gatherings.</p>
+        <p class="text-muted">Host and attend live talks, workshops, and gatherings.</p>
       </div>
     </div>
   </div>

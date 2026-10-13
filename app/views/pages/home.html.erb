@@ -1,130 +1,258 @@
-
+<% content_for :grid_word do %>NFTPLGAMS<% end %>
 <% content_for :hero do %>
-  <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
-    <div class="max-w-7xl mx-auto text-center px-6">
-      <h1 class="text-5xl font-bold leading-tight">Welcome to the Playground</h1>
-      <p class="mt-4 text-xl">Where creativity, technology, and community collide to build the future.</p>
-      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-        <%= render 'layouts/button', text: t('.get_involved'), href: get_involved_path %>
-        <%= render 'layouts/button', text: t('.explore'), href: explore_path, style: "blue"%>
+<section class="relative mx-auto max-w-5xl px-6 pb-8 pt-10 sm:px-10 sm:pt-16">
+  <!-- Doodles -->
+  <div class="doodle absolute -left-28 top-24 hidden h-52 w-52 rounded-full bg-leaf lg:block"></div>
+  <div class="doodle hand absolute right-0 top-28 hidden rotate-6 text-2xl leading-tight xl:block">Good things<br>happen here ♡</div>
+  <div class="doodle absolute -right-24 top-[28rem] hidden h-56 w-56 rounded-full bg-accent lg:block"></div>
+  <div class="doodle absolute left-2 top-[37rem] hidden text-6xl md:block">✳</div>
+
+  <!-- Hero -->
+  <div class="relative z-10 mx-auto max-w-2xl text-center">
+    <p class="section-label mb-4">A little space for possibility</p>
+    <h1 class="hand text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+      What brings you<br>to the <span class="relative inline-block">Playground<span class="absolute -bottom-1 left-0 h-2 w-full -rotate-2 rounded-full bg-accent"></span></span>?
+    </h1>
+    <p class="mx-auto mt-8 max-w-xl text-base leading-7 sm:text-lg">
+      <%= t('.hero_subtitle', default: "Follow your curiosity. Bring an idea. Meet someone unexpected.") %><br class="hidden sm:block">
+      <%= t('.hero_cta', default: "You don't need a plan — just an intention.") %>
+    </p>
+  </div>
+
+  <!-- Intent cards + form -->
+  <form id="welcome-form" class="relative z-10 mx-auto mt-12 max-w-2xl">
+    <fieldset>
+      <legend class="section-label mb-4 text-center">01 — <%= t('.pick_intent', default: 'Pick what feels right') %></legend>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <button type="button" class="intent-card" data-intent="Explore" aria-pressed="true">
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_explore', default: 'Explore') %></span><span class="text-2xl">◎</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_explore_desc', default: "I'm curious. Show me around.") %></span>
+        </button>
+        <button type="button" class="intent-card" data-intent="Create" aria-pressed="false">
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_create', default: 'Create') %></span><span class="text-2xl">✳</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_create_desc', default: "I've got an idea to play with.") %></span>
+        </button>
+        <button type="button" class="intent-card" data-intent="Connect" aria-pressed="false">
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_connect', default: 'Connect') %></span><span class="text-2xl">♡</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_connect_desc', default: "I'm here for people and sparks.") %></span>
+        </button>
+        <button type="button" class="intent-card" data-intent="Contribute" aria-pressed="false">
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_contribute', default: 'Contribute') %></span><span class="text-2xl">↗</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_contribute_desc', default: "I've got something to share.") %></span>
+        </button>
       </div>
+    </fieldset>
+
+    <div class="mt-4">
+      <label for="custom-intention" class="sr-only"><%= t('.custom_label', default: 'Or tell us in your own words') %></label>
+      <input id="custom-intention" name="custom-intention" type="text" maxlength="240"
+        placeholder="<%= t('.custom_placeholder', default: 'Or tell us in your own words…') %>"
+        class="w-full rounded-2xl border border-subtle bg-transparent px-5 py-4 text-sm placeholder:text-hint">
     </div>
-  </section>
+
+    <div class="my-8 flex items-center gap-4" aria-hidden="true">
+      <span class="h-px flex-1 bg-subtle"></span><span class="hand text-lg">and then…</span><span class="h-px flex-1 bg-subtle"></span>
+    </div>
+
+    <div class="text-center">
+      <p class="section-label mb-2">02 — <%= t('.make_connection', default: 'Make a connection') %></p>
+      <h2 class="hand text-3xl font-bold sm:text-4xl"><%= t('.email_title', default: 'Your email is your key.') %></h2>
+      <p class="mt-2 text-sm text-muted"><%= t('.email_subtitle', default: 'No password. No fuss. Just a way back in.') %></p>
+    </div>
+
+    <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+      <label for="email" class="sr-only">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required
+        placeholder="you@example.com"
+        class="min-w-0 flex-1 rounded-full border border-forest bg-white/70 px-6 py-4 text-base placeholder:text-hint">
+      <button id="submit-button" type="submit" class="btn-primary group">
+        <span id="button-label"><%= t('.lets_explore', default: "Let's explore") %></span>
+        <span class="text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+      </button>
+    </div>
+    <p id="feedback" class="mt-4 min-h-6 text-center text-sm" role="status" aria-live="polite"></p>
+    <p class="mt-1 text-center text-xs text-hint"><%= t('.agree_text', default: 'By continuing, you agree to be contacted about your Playground access.') %></p>
+  </form>
+</section>
 <% end %>
+
 <!-- About the Playground -->
-<section id="about" class="py-16 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-800">What is the Playground?</h2>
-    <p class="mt-4 text-lg text-gray-700">
-      The Playground is a space where digital creators, entrepreneurs, and artists come together to experiment, collaborate, and create impact.
-      It's more than just a place; it's a community built on innovation, openness, and mutual growth.
-    </p>
-    <p class="mt-4 text-lg text-gray-700">
-      At the Playground, we don’t just imagine the future—we play it into existence. Here, play means flowing with possibility rather than being confined by structure. It’s the difference between thinking inside the box and moving with the stream.
-    </p>
-    <div class="mt-6">
-       <%= link_to t('global.menu.learn_more'), what_we_do_path, class: "text-green-700 font-semibold" %>
-         
-    </div>
+<section class="py-12 text-center">
+  <h2 class="hand"><%= t('.about_title', default: 'What is the Playground?') %></h2>
+  <p class="mx-auto max-w-2xl text-muted">
+    The Playground is a space where digital creators, entrepreneurs, and artists come together to experiment, collaborate, and create impact.
+    It's more than just a place; it's a community built on innovation, openness, and mutual growth.
+  </p>
+  <p class="mx-auto mt-4 max-w-2xl text-muted">
+    At the Playground, we don't just imagine the future—we play it into existence. Here, play means flowing with possibility rather than being confined by structure.
+  </p>
+  <div class="mt-6">
+    <%= link_to t('global.menu.learn_more'), what_we_do_path, class: "font-semibold" %>
   </div>
 </section>
 
 <!-- Current Projects -->
-<section id="projects" class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-green-800 text-center">Current Projects</h2>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Project 1: NFT Museum -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">NFT Museum</h3>
-        <p class="mt-4 text-gray-700">Collaborating with artists and curators to bring digital art to life and engage the community through NFTs.</p>
-        <div class="mt-4 text-center">
-           <%= render 'layouts/button', text: "Explore Project", href: now_path, size: "small" %>
-    
-        </div>
+<section class="py-12">
+  <h2 class="hand text-center"><%= t('.projects_title', default: 'Current Projects') %></h2>
+  <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+    <div class="intent-card">
+      <span class="flex items-center justify-between">
+        <h3 class="text-lg font-bold">NFT Museum</h3>
+        <span class="text-2xl">✳</span>
+      </span>
+      <p class="mt-2 text-sm text-muted">Collaborating with artists and curators to bring digital art to life and engage the community through NFTs.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Explore", href: now_path, size: "small" %>
       </div>
+    </div>
 
-      <!-- Project 2: Cosmolocal -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">Cosmolocal</h3>
-        <p class="mt-4 text-gray-700">Exploring the balance between local production and global networks. Launching in May to create new connections.</p>
-        <div class="mt-4 text-center">
-           <%= render 'layouts/button', text: "Explore Project", href: "https://cosmolocal.space/", size: "small" %>
-        </div>
+    <div class="intent-card">
+      <span class="flex items-center justify-between">
+        <h3 class="text-lg font-bold">Cosmolocal</h3>
+        <span class="text-2xl">◎</span>
+      </span>
+      <p class="mt-2 text-sm text-muted">Exploring the balance between local production and global networks. Creating new connections.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Explore", href: "https://cosmolocal.space/", size: "small" %>
       </div>
+    </div>
 
-      <!-- Project 3: Local Entrepreneur Onboarding -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">Local Entrepreneur Onboarding</h3>
-        <p class="mt-4 text-gray-700">Supporting local businesses in Amsterdam to connect with the global blockchain community and adopt new technologies.</p>
-        <div class="mt-4 text-center">
-          <%= render 'layouts/button', text: "Explore Project", href: now_path, size: "small" %>        
-        </div>
+    <div class="intent-card">
+      <span class="flex items-center justify-between">
+        <h3 class="text-lg font-bold">Local Entrepreneur Onboarding</h3>
+        <span class="text-2xl">↗</span>
+      </span>
+      <p class="mt-2 text-sm text-muted">Supporting local businesses in Amsterdam to connect with the global blockchain community.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Explore", href: now_path, size: "small" %>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Get Involved -->
-<section id="get-started" class="py-16 bg-gray-100">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-800">Get Involved</h2>
-    <p class="mt-4 text-lg text-gray-700">The Playground is open to creators, entrepreneurs, and everyone in between. Whether you want to start a project, join a community, or contribute to ongoing work, we welcome you!</p>
-    <div class="mt-8">
-      <a href="/get-involved" class="bg-green-700 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-600 transition duration-300">Join the Playground</a>
-    </div>
+<section class="py-12 text-center">
+  <h2 class="hand"><%= t('.get_involved_title', default: 'Get Involved') %></h2>
+  <p class="mx-auto max-w-xl text-muted">
+    The Playground is open to creators, entrepreneurs, and everyone in between. Whether you want to start a project, join a community, or contribute to ongoing work, we welcome you!
+  </p>
+  <div class="mt-8">
+    <%= render 'layouts/button', text: t('.join_playground', default: 'Join the Playground'), href: get_involved_path %>
   </div>
 </section>
 
-<!-- Featured Stories & Podcasts -->
-<section id="stories" class="py-16">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-800">Stories & Podcasts</h2>
-    <p class="mt-4 text-lg text-gray-700">Hear from our community of creators, artists, and thought leaders. Discover their journeys, challenges, and insights.</p>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Story 1 -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">Artist Spotlight: Nima</h3>
-        <p class="mt-4 text-gray-700">Discover Nima’s creative process and how she uses blockchain technology to create immersive art experiences.</p>
-        <div class="mt-4 text-center">
-          <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>   
-        </div>
+<!-- Stories & Podcasts -->
+<section class="py-12">
+  <h2 class="hand text-center"><%= t('.stories_title', default: 'Stories & Podcasts') %></h2>
+  <p class="mx-auto mb-8 max-w-xl text-center text-muted">Hear from our community of creators, artists, and thought leaders.</p>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+    <div class="intent-card">
+      <h3 class="text-lg font-bold">Artist Spotlight: Nima</h3>
+      <p class="mt-2 text-sm text-muted">Discover Nima's creative process and how she uses blockchain technology to create immersive art experiences.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>
       </div>
+    </div>
 
-      <!-- Story 2 -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">The Future of DAOs</h3>
-        <p class="mt-4 text-gray-700">Learn from experts about how DAOs (Decentralized Autonomous Organizations) are shaping the future of governance and collaboration.</p>
-        <div class="mt-4 text-center">
-          <%= render 'layouts/button', text: "Listen Podcast", href: now_path, size: "small" %>   
-        </div>
+    <div class="intent-card">
+      <h3 class="text-lg font-bold">The Future of DAOs</h3>
+      <p class="mt-2 text-sm text-muted">Learn from experts about how DAOs are shaping the future of governance and collaboration.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Listen Podcast", href: now_path, size: "small" %>
       </div>
+    </div>
 
-      <!-- Story 3 -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-green-800">Cosmolocalism: Bridging Local and Global</h3>
-        <p class="mt-4 text-gray-700">Explore how cosmolocalism fosters mutual knowledge sharing between local and global networks.</p>
-        <div class="mt-4 text-center">
-          <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>   
-
-        </div>
+    <div class="intent-card">
+      <h3 class="text-lg font-bold">Cosmolocalism: Bridging Local and Global</h3>
+      <p class="mt-2 text-sm text-muted">Explore how cosmolocalism fosters mutual knowledge sharing between local and global networks.</p>
+      <div class="mt-4">
+        <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
-
-  <section class="hidden bg-gray-800 text-center py-16">
-    <h2 class="text-3xl font-semibold">Community Voices</h2>
-    <div class="mt-8 max-w-3xl mx-auto">
-      <p class="text-xl italic">"  A decentralized space where art, crypto, and community evolve naturally. No roadmap, no force—just movement."</p>
-      <p class="mt-4 text-gray-400">- A Entrepeneur</p>
-      <p class="text-xl italic">"I arrived here with no plan, and now we're building something extraordinary together."</p>
-      <p class="mt-4 text-gray-400">- A participant</p>
-      <p class="text-xl italic mt-8">"The Playground breathes freedom. Nothing is forced, everything flows."</p>
-      <p class="mt-4 text-gray-400">- An artist</p>
+<!-- Community Voices -->
+<section class="py-12">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="hand"><%= t('.voices_title', default: 'Community Voices') %></h2>
+    <div class="mt-6 space-y-8">
+      <div>
+        <p class="hand text-xl italic">"A decentralized space where art, crypto, and community evolve naturally. No roadmap, no force—just movement."</p>
+        <p class="mt-2 text-sm text-muted">— An Entrepreneur</p>
+      </div>
+      <div>
+        <p class="hand text-xl italic">"I arrived here with no plan, and now we're building something extraordinary together."</p>
+        <p class="mt-2 text-sm text-muted">— A participant</p>
+      </div>
+      <div>
+        <p class="hand text-xl italic">"The Playground breathes freedom. Nothing is forced, everything flows."</p>
+        <p class="mt-2 text-sm text-muted">— An artist</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="py-12">
+  <div class="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center sm:grid-cols-5 sm:gap-5" aria-label="Playground values">
+    <div>
+      <div class="hand text-4xl">↝</div>
+      <h3 class="section-label mt-2">Freedom</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Move where<br>inspiration takes you.</p>
+    </div>
+    <div>
+      <div class="hand text-4xl">◎</div>
+      <h3 class="section-label mt-2">Curiosity</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Discover what<br>sparks your mind.</p>
+    </div>
+    <div>
+      <div class="hand text-4xl">♡</div>
+      <h3 class="section-label mt-2">Welcome</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Feel at home.<br>Help others do too.</p>
+    </div>
+    <div>
+      <div class="hand text-4xl">〰</div>
+      <h3 class="section-label mt-2">Meeting</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Let the Ki flow<br>and resonate.</p>
+    </div>
+    <div>
+      <div class="hand text-4xl">✿</div>
+      <h3 class="section-label mt-2">Meaning</h3>
+      <p class="mt-2 text-sm leading-5 text-muted">Pass something<br>on — together.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const cards = [...document.querySelectorAll("[data-intent]")];
+  const buttonLabel = document.getElementById("button-label");
+  const form = document.getElementById("welcome-form");
+  const feedback = document.getElementById("feedback");
+  const labels = {
+    Explore: "<%= t('.lets_explore', default: "Let's explore") %>",
+    Create: "<%= t('.lets_create', default: "Let's create") %>",
+    Connect: "<%= t('.lets_connect', default: "Let's connect") %>",
+    Contribute: "<%= t('.lets_contribute', default: "Let's contribute") %>"
+  };
+  let selectedIntent = "Explore";
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      selectedIntent = card.dataset.intent;
+      cards.forEach(item => item.setAttribute("aria-pressed", String(item === card)));
+      if (buttonLabel) buttonLabel.textContent = labels[selectedIntent];
+      if (feedback) feedback.textContent = "";
+    });
+  });
+
+  if (form) {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const email = document.getElementById("email").value.trim();
+      const custom = document.getElementById("custom-intention").value.trim();
+      if (feedback) feedback.textContent = `Lovely. Your intention is "${custom || selectedIntent}". We'll send a link to ${email}.`;
+    });
+  }
+</script>

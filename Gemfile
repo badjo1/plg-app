@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "3.3.4"
+ruby "3.4.10"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', "~>8.0.2"
+gem 'rails', "~>8.1.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -68,7 +68,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tailwindcss-rails", "~> 2.3"
-
-
-gem "tailwindcss-ruby", "~> 4.0"
+gem "tailwindcss-rails", "~> 4.6"

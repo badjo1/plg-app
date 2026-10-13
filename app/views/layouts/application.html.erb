@@ -4,37 +4,37 @@
     <title>Playground Amsterdam</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f7f5e9">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="PLG" />
+    <meta name="apple-mobile-web-app-title" content="PLG">
 
     <% if authenticated? %>
       <meta name="current-user-id" content="<%= Current.user.id %>">
     <% end %>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7060374/6692032/css/fonts.css" />
-    <%=  stylesheet_link_tag "tailwind", "inter-font","data-turbo-track": "reload" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <script src="https://claims.manifoldxyz.dev/1.16.1/claimComplete.umd.min.js"></script>
-    <link rel="stylesheet" href="https://claims.manifoldxyz.dev/1.16.1/claimComplete.css">
-
   </head>
-  <body class="bg-yellow text-gray-900">
+  <body class="min-h-screen overflow-x-hidden">
     <header class="w-full">
       <%= render 'layouts/header' %>
     </header>
     <%= yield :hero %>
-    <main class="container mx-auto md:w-2/3 w-full py-8">
-      <%= render "layouts/flash" %> 
+    <main class="mx-auto max-w-5xl px-6 py-8 sm:px-10">
+      <%= render "layouts/flash" %>
       <%= yield %>
     </main>
-    <footer class="w-full bg-dark-green text-white py-8 border-t border-t-gray-900">
+    <footer class="w-full bg-forest px-6 pb-8 pt-10 text-center text-white">
       <%= render 'layouts/footer' %>
     </footer>
   </body>

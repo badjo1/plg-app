@@ -1,39 +1,46 @@
- <!-- Footer Section -->
-<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-center md:text-left font-sans">
-  <div>
-    <a href="https://your-link.com" target="_blank">
-    <%= link_to root_path do %> 
-      <%=  image_tag("nftplgams.png", size: "150x150", alt: " Logo Playground Amsterdam", class: "mx-auto md:mx-0", loading: "lazy")  %>
-    <% end %>
+<div class="mx-auto max-w-5xl">
+  <div class="grid grid-cols-1 gap-10 sm:grid-cols-4 sm:text-left">
+    <!-- 3x3 Letter Grid -->
+    <div class="flex items-start justify-center sm:justify-start">
+      <%= render 'layouts/letter_grid' %>
+    </div>
+
+    <div>
+      <h3 class="mb-3 text-sm font-bold uppercase tracking-widest text-accent"><%= t 'global.footer.about_us' %></h3>
+      <ul class="space-y-1 text-sm">
+        <li><%= link_to t('global.footer.who_we_are'), who_we_are_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.what_we_do'), what_we_do_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.vision'), vision_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.privacy'), privacy_path, class: "text-white hover:text-accent" %></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Playground</h3>
+      <ul class="space-y-1 text-sm">
+        <li><%= link_to t('global.footer.here_and_now'), now_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.get_involved'), get_involved_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.explore'), explore_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.communities'), communities_path, class: "text-white hover:text-accent" %></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Community</h3>
+      <ul class="space-y-1 text-sm">
+        <li><%= link_to t('global.footer.key_holders'), members_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.governance'), governance_path, class: "text-white hover:text-accent" %></li>
+        <li><%= link_to t('global.footer.token'), token_path, class: "text-white hover:text-accent" %></li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <h3 class="text-xl font-mono font-bold mb-3 text-yellow"><%= t 'global.footer.about_us' %></h3>
-    <ul>
-      <li><%= link_to t('global.footer.who_we_are'), who_we_are_path %></li>
-      <li><%= link_to t('global.footer.what_we_do'), what_we_do_path %></li>
-      <li><%= link_to t('global.footer.vision'), vision_path %></li>
-      <li><%= link_to t('global.footer.privacy'), privacy_path %></li>
-    </ul>
+
+  <div class="my-8 flex items-center gap-4" aria-hidden="true">
+    <span class="h-px flex-1 bg-white/20"></span>
+    <span class="hand text-lg text-accent">~</span>
+    <span class="h-px flex-1 bg-white/20"></span>
   </div>
-  <div>
-    <h3 class="text-xl font-bold mb-3 text-yellow">Playground</h3>
-    <ul>
-      <li><%= link_to t('global.footer.here_and_now'), now_path %></li>
-      <li><%= link_to t('global.footer.get_involved'), get_involved_path %></li>
-      <li><%= link_to t('global.footer.explore'), explore_path %></li>
-      <li><%= link_to t('global.footer.communities'), communities_path %></li>
-    </ul>
-  </div> 
-  <div>
-    <h3 class="text-xl font-bold mb-3 text-yellow">Community</h3>
-    <ul>
-      <li><a href="#">Twitter</a></li>
-      <li><%= link_to t('global.footer.key_holders'), members_path %></li>
-      <li><%= link_to t('global.footer.governance'), governance_path %></li>
-      <li><%= link_to t('global.footer.token'), token_path %></li>
-    </ul>
-  </div>
-</div>
-<div class="text-center mt-6">
-  <p class="text-yellow">&copy; 2024 www.playground.amsterdam</p>
+
+  <p class="hand mt-1 text-2xl text-accent">~ make room for what's next ~</p>
+  <p class="mt-2 text-xs text-white/60">&copy; <%= Date.today.year %> www.playground.amsterdam</p>
 </div>
