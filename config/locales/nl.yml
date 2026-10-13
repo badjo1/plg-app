@@ -19,15 +19,19 @@ nl:
       submit: BEWAAR
     menu:
       home: Home
+      stories: Verhalen
+      Events: Evenementen
       podcast: Podcast
       calendar: Kijk in de agenda
       contact: Contact
+      learn_more: Meer ontdekken
       login: Inloggen
       logout: Uitloggen
   pages:
     home:
+      tagline: Een ruimte zwanger van mogelijkheden
       teaser: Wat als je spelenderwijs het verschil kunt maken?
-      statement: In de Playground creëren we samen een unieke ruimte voor experimenteren en ontdekken. Hier delen we onze passie en zetten we ideeën om in actie. Doe mee en laten we samen groeien!          
+      statement: In de Playground creëren we samen een unieke ruimte voor experimenteren en ontdekken. Hier delen we onze passie en zetten we ideeën om in actie. Doe mee en laten we samen groeien!
       get_involved: Doe mee
       learn_more: meer leren
     who_we_are:

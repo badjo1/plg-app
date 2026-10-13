@@ -12,15 +12,19 @@ en:
       submit: SAVE
     menu:
       home: Home
+      stories: Stories
+      Events: Events
       podcast: Podcast
       calendar: Check the agenda
-      contact: Contact  
+      contact: Contact
+      learn_more: Learn more
       login: Sign in
-      logout: Sign out  
+      logout: Sign out
   pages:
     home:
+      tagline: A space pregnant with possibility
       teaser: What if you could make a difference doing what brings you the most joy?
-      statement: In the Playground, we create a unique space for experimentation and discovery together. Here, we share our passion and turn ideas into action. Join us, and let’s grow together!          
+      statement: In the Playground, we create a unique space for experimentation and discovery together. Here, we share our passion and turn ideas into action. Join us, and let’s grow together!
       get_involved: Get Involved
       learn_more: Learn More
     who_we_are:
