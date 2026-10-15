@@ -1,76 +1,57 @@
 <% content_for :grid_word do %>CREATIONS<% end %>
-<!-- Hero Section -->
 <section class="bg-forest text-white py-16 text-center">
   <div class="max-w-4xl mx-auto px-6">
-    <h1 class="text-4xl font-bold mb-4">PLG Token</h1>
-    <p class="text-lg">
-      De digitale valuta van de Playground. Gebruik PLG voor het huren van ruimte, het ondersteunen van kunstenaars en het betalen van drankjes en events.
-    </p>
-    <a href="#get-plg" class="mt-6 inline-block bg-accent text-forest font-semibold px-6 py-3 rounded-2xl">
-      Get PLG
-    </a>
+    <h1 class="text-4xl font-bold mb-4"><%= t('.title') %></h1>
+    <p class="text-lg"><%= t('.subtitle') %></p>
+    <a href="#get-plg" class="mt-6 inline-block bg-accent text-forest font-semibold px-6 py-3 rounded-2xl"><%= t('.get_plg') %></a>
   </div>
 </section>
 
-<!-- How It Works -->
 <section class="py-16 bg-cream">
   <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-forest">Hoe werkt PLG?</h2>
-    <p class="text-center text-muted mt-4 max-w-3xl mx-auto">
-      PLG-tokens worden beheerd door **keypassholders**. Zij kunnen PLG **minten en burnen** en gebruiken het om ruimte te reserveren in de Playground.  
-      Bezoekers kunnen PLG verdienen en besteden als een **loyalty token** – perfect voor het kopen van bier, kunst of toegang tot exclusieve events.
-    </p>
+    <h2 class="text-3xl font-bold text-center text-forest"><%= t('.how_title') %></h2>
+    <p class="text-center text-muted mt-4 max-w-3xl mx-auto"><%= t('.how_text') %></p>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
       <div class="bg-white/50 p-6 shadow rounded-2xl">
-        <h3 class="text-xl font-semibold text-forest">🔑 Keypassholders</h3>
-        <p class="mt-4 text-muted">Kunnen PLG minten en gebruiken om de Playground te boeken.</p>
+        <h3 class="text-xl font-semibold text-forest"><%= t('.keypass_title') %></h3>
+        <p class="mt-4 text-muted"><%= t('.keypass_text') %></p>
       </div>
       <div class="bg-white/50 p-6 shadow rounded-2xl">
-        <h3 class="text-xl font-semibold text-forest">🎟️ Bezoekers & Community</h3>
-        <p class="mt-4 text-muted">Verdienen PLG via events en kunnen het gebruiken voor consumpties en kunst.</p>
+        <h3 class="text-xl font-semibold text-forest"><%= t('.visitors_title') %></h3>
+        <p class="mt-4 text-muted"><%= t('.visitors_text') %></p>
       </div>
       <div class="bg-white/50 p-6 shadow rounded-2xl">
-        <h3 class="text-xl font-semibold text-forest">💱 Ruil & Gebruik</h3>
-        <p class="mt-4 text-muted">PLG kan worden overgedragen of verzilverd binnen de Playground-community.</p>
+        <h3 class="text-xl font-semibold text-forest"><%= t('.exchange_title') %></h3>
+        <p class="mt-4 text-muted"><%= t('.exchange_text') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- What Can You Do? -->
 <section class="py-16 text-center bg-forest text-white">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold">Wat kun je met PLG?</h2>
+    <h2 class="text-3xl font-bold"><%= t('.what_title') %></h2>
     <div class="mt-6 grid md:grid-cols-3 gap-8 text-lg">
-      <div>🏠 Ruimte huren</div>
-      <div>🎟️ Kunst & events betalen</div>
-      <div>🥂 Bier & andere goodies</div>
+      <div><%= t('.what_space') %></div>
+      <div><%= t('.what_art') %></div>
+      <div><%= t('.what_drinks') %></div>
     </div>
-    <a href="#get-plg" class="mt-6 inline-block bg-accent text-forest font-semibold px-6 py-3 rounded-2xl">
-      Get PLG
-    </a>
+    <a href="#get-plg" class="mt-6 inline-block bg-accent text-forest font-semibold px-6 py-3 rounded-2xl"><%= t('.get_plg') %></a>
   </div>
 </section>
 
-<!-- NFTs & Access -->
 <section class="py-16 bg-cream">
   <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-forest">NFT's & Toegang</h2>
-    <p class="text-center text-muted mt-4 max-w-3xl mx-auto">
-      Alleen **keypassholders** hebben volledige controle over PLG. Zij kunnen tokens **verdelen, minten en uitgeven** binnen de Playground.
-    </p>
+    <h2 class="text-3xl font-bold text-center text-forest"><%= t('.nft_title') %></h2>
+    <p class="text-center text-muted mt-4 max-w-3xl mx-auto"><%= t('.nft_text') %></p>
     <div class="mt-10 grid md:grid-cols-2 gap-8">
       <div class="bg-white/50 p-6 shadow rounded-2xl">
-        <h3 class="text-xl font-semibold text-forest">🔑 NFT-gebaseerde toegang</h3>
-        <p class="mt-4 text-muted">
-          Alleen keypassholders kunnen PLG minten en beheren.
-        </p>
+        <h3 class="text-xl font-semibold text-forest"><%= t('.nft_access_title') %></h3>
+        <p class="mt-4 text-muted"><%= t('.nft_access_text') %></p>
       </div>
       <div class="bg-white/50 p-6 shadow rounded-2xl">
-        <h3 class="text-xl font-semibold text-forest">💳 Community gebruik</h3>
-        <p class="mt-4 text-muted">
-          PLG wordt gebruikt als loyaliteitstoken voor bezoekers, zodat ze makkelijk kunst en consumpties kunnen kopen.
-        </p>
+        <h3 class="text-xl font-semibold text-forest"><%= t('.community_use_title') %></h3>
+        <p class="mt-4 text-muted"><%= t('.community_use_text') %></p>
       </div>
     </div>
   </div>

@@ -1,64 +1,48 @@
 <% content_for :grid_word do %>BELONGING<% end %>
 <section class="bg-cream py-16 px-6 lg:px-24">
   <div class="max-w-4xl mx-auto text-center">
-    <h1 class="text-4xl font-bold text-forest">Join the Playground</h1>
-    <p class="mt-4 text-lg text-muted">
-      A space for creators, built by creators. Become a KeyPass holder and help shape the future of the Playground.
-    </p>
+    <h1 class="text-4xl font-bold text-forest"><%= t('.title') %></h1>
+    <p class="mt-4 text-lg text-muted"><%= t('.subtitle') %></p>
   </div>
-   <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
-      <h2 class="text-2xl font-semibold text-forest">🗝 The KeyPass</h2>
-      <p class="mt-2 text-muted">
-        In May 2023, 17 pioneers joined the Playground by acquiring the first-ever
-        <a href="https://app.manifold.xyz/c/playing-the-future" target="_blank" class="text-forest font-semibold underline">PLAYING THE FUTUREpass</a> — an NFT artwork by Felix LePeintre. This marked the beginning of a shared journey toward securing a permanent home for digital creation in Amsterdam.
-      </p>
-      <p class="mt-2 text-muted">
-        Now, three years later, the Playground has evolved. As a passholder, you are not just a member—you can become a co-creator of this space.
-      </p>
-    </div>
-
+  <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
+    <h2 class="text-2xl font-semibold text-forest"><%= t('.keypass_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.keypass_text_1_html').html_safe %></p>
+    <p class="mt-2 text-muted"><%= t('.keypass_text_2') %></p>
+  </div>
 
   <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
     <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
-      <h2 class="text-2xl font-semibold text-forest">🔑 Access to the Central Agenda</h2>
-      <p class="mt-2 text-muted">Stay connected with everything happening in the Playground, from community events to creative sessions.</p>
+      <h2 class="text-2xl font-semibold text-forest"><%= t('.agenda_title') %></h2>
+      <p class="mt-2 text-muted"><%= t('.agenda_text') %></p>
     </div>
-
     <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
-      <h2 class="text-2xl font-semibold text-forest">🏢 Use the Space</h2>
-      <p class="mt-2 text-muted">Book the Playground for your projects or underlet it to others under your responsibility.</p>
+      <h2 class="text-2xl font-semibold text-forest"><%= t('.space_title') %></h2>
+      <p class="mt-2 text-muted"><%= t('.space_text') %></p>
     </div>
-
     <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
-      <h2 class="text-2xl font-semibold text-forest">⚖ You Decide Who Joins</h2>
-      <p class="mt-2 text-muted">Passholders collectively decide who joins the network and shape the shared use of the space.</p>
+      <h2 class="text-2xl font-semibold text-forest"><%= t('.decide_title') %></h2>
+      <p class="mt-2 text-muted"><%= t('.decide_text') %></p>
     </div>
-
     <div class="bg-white/50 p-6 shadow-none border border-subtle rounded-2xl">
-      <h2 class="text-2xl font-semibold text-forest">🌱 More Than a Membership</h2>
-      <p class="mt-2 text-muted">While not official yet, keyholders are set to become part of a cooperative-in-the-making, ensuring long-term stewardship of the Playground.</p>
+      <h2 class="text-2xl font-semibold text-forest"><%= t('.more_title') %></h2>
+      <p class="mt-2 text-muted"><%= t('.more_text') %></p>
     </div>
   </div>
 
   <div class="mt-12 text-center">
-    <h2 class="text-3xl font-bold text-forest">How to Join?</h2>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.how_to_join') %></h2>
     <div class="mt-6 max-w-3xl mx-auto text-muted space-y-4">
-      <p>✅ <strong>Get the New KeyPass</strong> – Gain access and become part of the Playground’s evolution.</p>
-      <p>✅ <strong>Engage & Contribute</strong> – Use the space, host events, and help shape the future.</p>
-      <p>✅ <strong>Vote on New Members</strong> – As a passholder, you collectively decide who joins next.</p>
+      <p>✅ <strong><%= t('.step_1') %></strong></p>
+      <p>✅ <strong><%= t('.step_2') %></strong></p>
+      <p>✅ <strong><%= t('.step_3') %></strong></p>
     </div>
-
-    <a href="#" class="mt-8 inline-block bg-forest hover:bg-forest text-white font-semibold text-lg px-6 py-3 rounded-2xl transition duration-300">
-      🚀 Get Your Key
+    <a href="#" class="mt-8 inline-block bg-forest hover:bg-forest-light text-white font-semibold text-lg px-6 py-3 rounded-2xl transition duration-300">
+      <%= t('.get_key') %>
     </a>
   </div>
 
   <div class="mt-12 bg-white/50 p-6 shadow-none border border-subtle rounded-2xl max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold text-forest">🔄 Existing Passholders</h2>
-    <p class="mt-2 text-muted">
-      If you already hold a <strong>PLAYING THE FUTURE</strong> pass, you can renew your KeyPass for free or at a discounted rate (final details to be confirmed).
-    </p>
+    <h2 class="text-2xl font-semibold text-forest"><%= t('.existing_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.existing_text') %></p>
   </div>
-
 </section>
-

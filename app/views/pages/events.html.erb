@@ -2,49 +2,38 @@
 <% content_for :hero do %>
   <section class="bg-gradient-to-r from-green-500 to-yellow-500 text-white py-16">
     <div class="max-w-7xl mx-auto text-center px-6">
-      <h1 class="text-5xl font-bold leading-tight">Events in de Playground</h1>
-      <p class="mt-4 text-xl">      Van meetups tot exposities—ontdek wat er speelt in de Playground en doe mee!</p>
-      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"">
-      <%= render 'layouts/button', text: "Bekijk Events op Luma", href: "https://lu.ma/playground.amsterdam" %>
+      <h1 class="text-5xl font-bold leading-tight"><%= t('.title') %></h1>
+      <p class="mt-4 text-xl"><%= t('.subtitle') %></p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <%= render 'layouts/button', text: t('.view_events'), href: "https://lu.ma/playground.amsterdam" %>
       </div>
     </div>
   </section>
 <% end %>
 
-
-<!-- Vorige Events -->
 <section class="py-12 bg-white/50">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">⏳ Vorige Events</h2>
-    <p class="mt-2 text-muted">Bekijk welke events we al hebben georganiseerd.</p>
-    
+    <h2 class="text-3xl font-bold text-forest"><%= t('.past_events') %></h2>
+    <p class="mt-2 text-muted"><%= t('.past_subtitle') %></p>
     <div class="grid md:grid-cols-2 gap-6 mt-6">
-      <!-- Event 1 -->
       <div class="bg-cream shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">NFT Season Kickoff</h3>
-        <p class="text-muted">Een avond vol digitale kunst en blockchain innovatie.</p>
-        <a href="https://lu.ma/sug833s5" target="_blank" class="mt-4 text-forest font-semibold inline-block">Bekijk op Luma →</a>
+        <h3 class="text-xl font-semibold"><%= t('.nft_kickoff') %></h3>
+        <p class="text-muted"><%= t('.nft_kickoff_desc') %></p>
+        <a href="https://lu.ma/sug833s5" target="_blank" class="mt-4 text-forest font-semibold inline-block"><%= t('.view_on_luma') %> →</a>
       </div>
-
-      <!-- Event 2 -->
       <div class="bg-cream shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Wondermarkt</h3>
-        <p class="text-muted">Verhalen, muziek, kraampje en Web3-discussies in de binnentuin.</p>
-        <a href="https://lu.ma/euampoxr" target="_blank" class="mt-4 text-forest font-semibold inline-block">Bekijk op Luma →</a>
+        <h3 class="text-xl font-semibold"><%= t('.wondermarkt') %></h3>
+        <p class="text-muted"><%= t('.wondermarkt_desc') %></p>
+        <a href="https://lu.ma/euampoxr" target="_blank" class="mt-4 text-forest font-semibold inline-block"><%= t('.view_on_luma') %> →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Zelf een Event Organiseren -->
 <section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-forest">💡 Wil je een event organiseren?</h2>
-    <p class="mt-2 text-muted mb-6">
-      De Playground is een plek voor experiment en ontmoeting. Heb je een idee voor een event? Laat het ons weten!
-    </p>
-    <%= render 'layouts/button', text: t('.organiseer_een_event'), href: "https://docs.google.com/document/d/1g7sdlpxTukBHD08wLUFuEhzYblus7NRHI_qSSM3TK3g/edit?usp=sharing", style: "green" %>
-    
-
+    <h2 class="text-3xl font-bold text-forest"><%= t('.organize_title') %></h2>
+    <p class="mt-2 text-muted mb-6"><%= t('.organize_text') %></p>
+    <%= render 'layouts/button', text: t('.organiseer_een_event'), href: "https://docs.google.com/document/d/1g7sdlpxTukBHD08wLUfuEhzYblus7NRHI_qSSM3TK3g/edit?usp=sharing" %>
   </div>
 </section>

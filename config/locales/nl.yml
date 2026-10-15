@@ -4,7 +4,7 @@ nl:
   global:
     footer:
       about_us: Over ons
-      who_we_are: Wie we zijn 
+      who_we_are: Wie we zijn
       what_we_do: Wat we doen
       vision: Visie
       privacy: Privacy
@@ -15,6 +15,7 @@ nl:
       key_holders: Sleutelhouders
       governance: Governance
       token: Token
+      tagline: maak ruimte voor wat komt
     forms:
       submit: BEWAAR
     menu:
@@ -29,9 +30,254 @@ nl:
       logout: Uitloggen
   pages:
     home:
-      tagline: Een ruimte zwanger van mogelijkheden
+      tagline: Een ruimte waar ideeën tot leven komen
+      hero_heading_html: "Wat brengt jou<br>naar de"
+      hero_subtitle: Volg je nieuwsgierigheid. Breng een idee. Ontmoet iemand onverwachts.
+      hero_cta: "Je hebt geen plan nodig — alleen een intentie."
+      pick_intent: Kies wat goed voelt
+      intent_explore: Ontdekken
+      intent_explore_desc: Ik ben nieuwsgierig. Laat me rondkijken.
+      intent_create: Creëren
+      intent_create_desc: Ik heb een idee om mee te spelen.
+      intent_connect: Verbinden
+      intent_connect_desc: Ik ben hier voor mensen en vonken.
+      intent_contribute: Bijdragen
+      intent_contribute_desc: Ik heb iets om te delen.
+      custom_label: Of vertel het in je eigen woorden
+      custom_placeholder: "Of vertel het in je eigen woorden…"
+      and_then: "en dan…"
+      make_connection: Maak verbinding
+      email_title: Je e-mail is je sleutel.
+      email_subtitle: Geen wachtwoord. Geen gedoe. Gewoon een weg terug.
+      lets_explore: Laten we ontdekken
+      lets_create: Laten we creëren
+      lets_connect: Laten we verbinden
+      lets_contribute: Laten we bijdragen
+      agree_text: Door verder te gaan, stem je in om gecontacteerd te worden over je Playground-toegang.
+      about_title: Wat is de Playground?
+      about_text_1: De Playground is een ruimte waar digitale makers, ondernemers en kunstenaars samenkomen om te experimenteren, samen te werken en impact te maken. Het is meer dan een plek; het is een community gebouwd op innovatie, openheid en wederzijdse groei.
+      about_text_2: "In de Playground beelden we de toekomst niet alleen in—we spelen haar tot leven. Hier betekent spelen: meebewegen met mogelijkheden in plaats van begrensd te worden door structuur."
+      projects_title: Huidige Projecten
+      project_nft_museum: NFT Museum
+      project_nft_museum_desc: Samenwerking met kunstenaars en curatoren om digitale kunst tot leven te brengen en de community te betrekken via NFT's.
+      project_cosmolocal: Cosmolocal
+      project_cosmolocal_desc: Het verkennen van de balans tussen lokale productie en wereldwijde netwerken. Nieuwe verbindingen leggen.
+      project_entrepreneurs: Lokale Ondernemers Onboarding
+      project_entrepreneurs_desc: Lokale bedrijven in Amsterdam helpen verbinden met de wereldwijde blockchain-community.
+      explore_btn: Ontdek
+      get_involved_title: Doe mee
+      get_involved_text: De Playground staat open voor makers, ondernemers en iedereen daartussenin. Of je nu een project wilt starten, je bij een community wilt aansluiten of wilt bijdragen aan lopend werk, je bent welkom!
+      join_playground: Sluit je aan bij de Playground
+      stories_title: Verhalen & Podcasts
+      stories_subtitle: Luister naar onze community van makers, kunstenaars en denkers.
+      story_nima: "Kunstenaar in de spotlight: Nima"
+      story_nima_desc: Ontdek Nima's creatieve proces en hoe zij blockchaintechnologie gebruikt om meeslepende kunstervaringen te maken.
+      read_story: Lees verhaal
+      story_daos: De Toekomst van DAO's
+      story_daos_desc: Leer van experts hoe DAO's de toekomst van bestuur en samenwerking vormgeven.
+      listen_podcast: Luister podcast
+      story_cosmolocal: "Cosmolocalisme: Lokaal en Globaal Verbinden"
+      story_cosmolocal_desc: Ontdek hoe cosmolocalisme wederzijdse kennisdeling tussen lokale en mondiale netwerken bevordert.
+      voices_title: Stemmen uit de Community
+      voice_1: "Een gedecentraliseerde ruimte waar kunst, crypto en community op natuurlijke wijze evolueren. Geen routekaart, geen dwang—alleen beweging."
+      voice_1_by: "— Een ondernemer"
+      voice_2: Ik kwam hier zonder plan, en nu bouwen we samen iets buitengewoons.
+      voice_2_by: "— Een deelnemer"
+      voice_3: De Playground ademt vrijheid. Niets is geforceerd, alles stroomt.
+      voice_3_by: "— Een kunstenaar"
+      value_freedom: Vrijheid
+      value_freedom_desc: Beweeg tussen plekken die je inspireren.
+      value_curiosity: Nieuwsgierigheid
+      value_curiosity_desc: Ontdek wat je verbeelding prikkelt.
+      value_welcome: Welkom
+      value_welcome_desc: Voel je thuis. Help anderen dat ook te doen.
+      value_meeting: Ontmoeting
+      value_meeting_desc: Laat de Ki stromen en resoneren.
+      value_meaning: Betekenis
+      value_meaning_desc: "Geef iets door — samen."
       teaser: Wat als je spelenderwijs het verschil kunt maken?
       statement: In de Playground creëren we samen een unieke ruimte voor experimenteren en ontdekken. Hier delen we onze passie en zetten we ideeën om in actie. Doe mee en laten we samen groeien!
       get_involved: Doe mee
       learn_more: meer leren
+    explore:
+      title: Ontdek de Playground
+      subtitle: Ontdek kunst, projecten en verhalen van de Playground-community.
+      art_title: Kunstcollectie
+      art_subtitle: Een permanente collectie van digitale en fysieke kunstwerken, samengesteld binnen de Playground.
+      featured_artwork: Uitgelicht Kunstwerk
+      featured_artwork_desc: Ontdek NFT- en digitale kunstwerken uit onze collectie.
+      curated_artists: Geselecteerde Kunstenaars
+      curated_artists_desc: Ontmoet de kunstenaars die de toekomst van digitale creativiteit vormgeven.
+      ongoing_exhibitions: Lopende Tentoonstellingen
+      ongoing_exhibitions_desc: Bezoek onze nieuwste tentoonstellingen in de Playground.
+      projects_title: Verken Projecten
+      projects_subtitle: Ontdek actieve projecten binnen de Playground.
+      live_experiments: Live Experimenten
+      live_experiments_desc: Volg gedecentraliseerde experimenten en blockchain-prototypes.
+      collaborative_builds: Samenwerkingsprojecten
+      collaborative_builds_desc: Werk samen met makers en ontwikkelaars aan community-projecten.
+      stories_title: Verhalen uit de Community
+      stories_subtitle: Lees over de mensen die de Playground vormgeven.
+      featured_story: Uitgelicht Verhaal
+      featured_story_title: Drie Jaar in het Walenweeshuis
+      featured_story_desc: Van mei 2022 tot augustus 2025 was de NFT Playground thuis in het Walenweeshuis. Een terugblik op wat we samen hebben gebouwd.
+      watch_and_read: Bekijk & lees
+      founder_insights: Oprichtersverhalen
+      founder_insights_desc: Ontmoet de visionairs achter Playground-projecten.
+      podcast_episodes: Podcast Afleveringen
+      podcast_episodes_desc: Luister naar gesprekken met makers en vernieuwers.
+      community_spotlights: Community Spotlights
+      community_spotlights_desc: Ontdek leden die het verschil maken.
+      spaces_title: Ruimtes in de Playground
+      spaces_subtitle: Vind jouw plek binnen de Playground.
+      nft_museum: Het NFT Museum
+      nft_museum_desc: Een speciale ruimte voor digitale en blockchain-gebaseerde kunst.
+      co_creation_labs: Co-Creatie Labs
+      co_creation_labs_desc: Ruimtes voor samenwerking, brainstormen en prototyping.
+      event_hall: Evenementenzaal
+      event_hall_desc: Organiseer en bezoek talks, workshops en bijeenkomsten.
+    stories:
+      featured_label: Uitgelicht Verhaal
+      title: Drie Jaar in het Walenweeshuis
+      subtitle: "Van mei 2022 tot augustus 2025 was de NFT Playground thuis in het Walenweeshuis — een 17e-eeuws weeshuis in het hart van Amsterdam, omgetoverd tot een levend lab voor digitale kunst, blockchaincultuur en community."
+      paragraph_1: Wat begon als een experiment werd een beweging. Ruim drie jaar lang was het Walenweeshuis de plek waar kunstenaars, bouwers en nieuwsgierige geesten samenkwamen om het snijvlak van kunst, technologie en community te verkennen.
+      paragraph_2: "NFT-tentoonstellingen sierden de muren van een gebouw dat ooit kinderen herbergde — nu herbergde het ideeën. Crypto drinks op dinsdagavond. Workshops op woensdagmiddag. Pop-up events die uitwaaierden over de binnenplaats. Een ruimte waar je met niets kon binnenlopen en vertrekken met een project, een medewerker of een totaal nieuw perspectief."
+      paragraph_3: "Het hoofdstuk in het Walenweeshuis is afgesloten, maar wat daar is opgebouwd leeft voort — in de mensen die verbonden raakten, de projecten die werden gelanceerd en de cultuur die groeide vanuit die muren."
+      quote: "\"We exposeerden niet alleen kunst — we leefden het.\""
+      quote_by: "— De Playground-community"
+      timeline: De Tijdlijn
+      timeline_1_date: Mei 2022
+      timeline_1_title: Deuren Open
+      timeline_1_desc: De NFT Playground trekt in het Walenweeshuis. De eerste tentoonstellingen gaan op. De ruimte komt tot leven.
+      timeline_2_date: "2022 — 2023"
+      timeline_2_title: Community Wortelt
+      timeline_2_desc: Wekelijkse crypto drinks, artist residencies, DAO-experimenten. Een netwerk van makers vormt zich rond de ruimte.
+      timeline_3_date: "2023 — 2024"
+      timeline_3_title: Horizon Verbreden
+      timeline_3_desc: Cosmolocal lanceert. Lokale ondernemers ontdekken Web3. De Playground wordt een brug tussen werelden.
+      timeline_4_date: "2024 — 2025"
+      timeline_4_title: Nalatenschap in Beweging
+      timeline_4_desc: De KeyPass-community verstevigt. Governance krijgt vorm. De zaden geplant in het Walenweeshuis verspreiden zich over Amsterdam.
+      timeline_5_date: Augustus 2025
+      timeline_5_title: Een Hoofdstuk Sluit
+      timeline_5_desc: "Het Walenweeshuis-tijdperk eindigt. De community gaat door — de Playground is geen gebouw, het is een beweging."
+      cta_title: Het verhaal gaat door.
+      cta_text: "De Playground zoekt een nieuw thuis. De community is er nog steeds — nog steeds aan het creëren, verbinden en de toekomst spelen."
+      cta_button: Doe mee
+    get_involved:
+      title: Stap in de Flow
+      subtitle: "De Playground staat open—waar wil je beginnen? Of je hier bent om te creëren, te verbinden of bij te dragen, er is een plek voor jou."
+      global_local_title: "Lokale Impact, Mondiale Kennis"
+      global_local_text: Door kennis en middelen te delen tussen lokale gemeenschappen en mondiale netwerken, versterken we zelfproductie en bestuur. Wat lokaal wordt gecreëerd stroomt naar een mondiale kennishub, zodat iedereen kan profiteren.
+      create_title: Creëer & Experimenteer
+      create_text: "Start je eigen NFT, DAO, of experimenteer met nieuwe ideeën. De ruimte is van jou om te verkennen."
+      start_a_project: Start een Project
+      discover_title: Ontdek & Verbind
+      discover_text: "Dwaal door de Playground, bekijk live projecten en ervaar digitale kunst."
+      explore: Verken
+      cocreate_title: Co-Creëer & Draag bij
+      cocreate_text: Ontmoet makers, deel kennis en help de Playground samen vorm te geven.
+      join_a_community: Sluit je aan bij een Community
+    now:
+      title: Live in de Playground
+      subtitle: Ontdek de projecten die op dit moment plaatsvinden in de Playground. Doe mee, leer en bouw mee aan de toekomst.
+      active_projects: Actieve Projecten
+      active_subtitle: Bekijk waar we op dit moment aan werken en sluit je aan.
+      nft_museum: NFT Museum
+      nft_museum_desc: Samen met Nima en kunstenaars bouwen we aan een NFT-expositie.
+      more_info: Meer info
+      cosmolocal: Cosmolocal (Mei)
+      cosmolocal_desc: Een maand gewijd aan het verbinden van lokale en globale kennis.
+      join_in: Doe mee
+      entrepreneurs: Onboarding van ondernemers
+      entrepreneurs_desc: We introduceren lokale ondernemers in de buurt aan Web3 en de Playground.
+      connect: Sluit je aan
+      idea_title: Heb jij een idee?
+      idea_text: De Playground groeit door initiatieven van de community. Wil jij iets organiseren of bijdragen? Laat het ons weten!
+      start_project: Start een project
+    events:
+      title: Events in de Playground
+      subtitle: Van meetups tot exposities—ontdek wat er speelt in de Playground en doe mee!
+      view_events: Bekijk Events op Luma
+      past_events: Vorige Events
+      past_subtitle: Bekijk welke events we al hebben georganiseerd.
+      nft_kickoff: NFT Season Kickoff
+      nft_kickoff_desc: Een avond vol digitale kunst en blockchain innovatie.
+      view_on_luma: Bekijk op Luma
+      wondermarkt: Wondermarkt
+      wondermarkt_desc: "Verhalen, muziek, kraampjes en Web3-discussies in de binnentuin."
+      organize_title: Wil je een event organiseren?
+      organize_text: De Playground is een plek voor experiment en ontmoeting. Heb je een idee voor een event? Laat het ons weten!
+      organiseer_een_event: Organiseer een Event
+    communities:
+      title: Sluit je aan bij een Community
+      subtitle: Ontdek groepen binnen de Playground die passen bij jouw interesses en sluit je aan.
+      choose_title: Kies een groep die bij je past
+      choose_subtitle: Vind gelijkgestemden en werk samen aan projecten en ideeën.
+      join_group: Join deze groep
+      start_title: Zelf een groep starten?
+      start_text: Heb je een idee voor een community? Start je eigen groep en bouw samen aan iets bijzonders.
+      start_group: Start een groep
+    members:
+      title: Word lid van de Playground
+      subtitle: Een ruimte voor makers, gebouwd door makers. Word KeyPass-houder en help de toekomst van de Playground vormgeven.
+      keypass_title: De KeyPass
+      keypass_text_1_html: "In mei 2023 sloten 17 pioniers zich aan bij de Playground door de allereerste <a href=\"https://app.manifold.xyz/c/playing-the-future\" target=\"_blank\" class=\"text-forest font-semibold underline\">PLAYING THE FUTURE pass</a> te verwerven — een NFT-kunstwerk van Felix LePeintre. Dit markeerde het begin van een gezamenlijke reis naar het veiligstellen van een permanent thuis voor digitale creatie in Amsterdam."
+      keypass_text_2: "Nu, drie jaar later, is de Playground geëvolueerd. Als pashouder ben je niet alleen lid—je kunt mede-maker worden van deze ruimte."
+      agenda_title: Toegang tot de Centrale Agenda
+      agenda_text: "Blijf verbonden met alles wat er in de Playground gebeurt, van community-events tot creatieve sessies."
+      space_title: Gebruik de Ruimte
+      space_text: Boek de Playground voor je projecten of onderverhuur aan anderen onder jouw verantwoordelijkheid.
+      decide_title: Jij beslist wie erbij komt
+      decide_text: Pashouders beslissen gezamenlijk wie zich aansluit bij het netwerk en geven vorm aan het gedeelde gebruik van de ruimte.
+      more_title: Meer dan een Lidmaatschap
+      more_text: "Hoewel nog niet officieel, zijn sleutelhouders bezig onderdeel te worden van een coöperatie-in-wording, die het langdurige beheer van de Playground waarborgt."
+      how_to_join: Hoe sluit je aan?
+      step_1: "Haal de nieuwe KeyPass – Krijg toegang en word onderdeel van de evolutie van de Playground."
+      step_2: "Doe mee & Draag bij – Gebruik de ruimte, organiseer events en help de toekomst vorm te geven."
+      step_3: "Stem over nieuwe leden – Als pashouder beslis je collectief wie er als volgende bij komt."
+      get_key: Haal je Sleutel
+      existing_title: Bestaande Pashouders
+      existing_text: "Als je al een PLAYING THE FUTURE pass hebt, kun je je KeyPass gratis of met korting verlengen (definitieve details worden nog bevestigd)."
+    governance:
+      title: Playground DAO
+      subtitle: Beheer samen de Playground. Keypass-houders bepalen wie de ruimte gebruikt, PLG-houders stemmen over budget en beleid.
+      join_dao: Join the DAO (STAKE PLG)
+      how_title: Hoe werkt het?
+      keypass_title: "KeyPass = Toegang & Beheer"
+      keypass_text_1: Keypass-houders beslissen over het gebruik van de ruimte en wie deze mag gebruiken.
+      keypass_text_2: Ze kunnen voorstellen doen voor belangrijke wijzigingen en nieuwe initiatieven.
+      plg_title: PLG Staking = Stemrecht
+      plg_text_1: PLG-houders stemmen over voorstellen van Keypass-houders en beslissen over budgetten en activiteiten.
+      plg_text_2: Actieve stemmers ontvangen staking rewards als beloning.
+      decision_title: Besluitvorming
+      decision_keypass: Keypass-houders maken voorstellen over ruimtegebruik en initiatieven.
+      decision_plg: PLG-stakers stemmen over deze voorstellen en operationele beslissingen.
+      why_title: Waarom meedoen?
+      why_text: Help de Playground te groeien en beslis mee over de toekomst.
+      why_influence: Invloed op beslissingen
+      why_rewards: Beloningen voor actieve deelname
+      why_community: Vorm de community
+    token:
+      title: PLG Token
+      subtitle: De digitale valuta van de Playground. Gebruik PLG voor het huren van ruimte, het ondersteunen van kunstenaars en het betalen van drankjes en events.
+      get_plg: Get PLG
+      how_title: Hoe werkt PLG?
+      how_text: "PLG-tokens worden beheerd door keypassholders. Zij kunnen PLG minten en burnen en gebruiken het om ruimte te reserveren in de Playground. Bezoekers kunnen PLG verdienen en besteden als een loyalty token — perfect voor het kopen van bier, kunst of toegang tot exclusieve events."
+      keypass_title: Keypassholders
+      keypass_text: Kunnen PLG minten en gebruiken om de Playground te boeken.
+      visitors_title: Bezoekers & Community
+      visitors_text: Verdienen PLG via events en kunnen het gebruiken voor consumpties en kunst.
+      exchange_title: Ruil & Gebruik
+      exchange_text: PLG kan worden overgedragen of verzilverd binnen de Playground-community.
+      what_title: Wat kun je met PLG?
+      what_space: Ruimte huren
+      what_art: Kunst & events betalen
+      what_drinks: Bier & andere goodies
+      nft_title: NFT's & Toegang
+      nft_text: Alleen keypassholders hebben volledige controle over PLG. Zij kunnen tokens verdelen, minten en uitgeven binnen de Playground.
+      nft_access_title: NFT-gebaseerde toegang
+      nft_access_text: Alleen keypassholders kunnen PLG minten en beheren.
+      community_use_title: Community gebruik
+      community_use_text: "PLG wordt gebruikt als loyaliteitstoken voor bezoekers, zodat ze makkelijk kunst en consumpties kunnen kopen."
     who_we_are:

@@ -1,13 +1,10 @@
 <% content_for :grid_word do %>INSPIRING<% end %>
 
-<!-- Featured Story: Walenweeshuis -->
 <section class="py-12">
   <div class="mx-auto max-w-3xl text-center">
-    <p class="section-label mb-4">Featured Story</p>
-    <h1>Three Years in the Walenweeshuis</h1>
-    <p class="mx-auto mt-4 max-w-xl text-muted">
-      From May 2022 to August 2025, the NFT Playground called the Walenweeshuis home — a 17th-century orphanage in the heart of Amsterdam, turned into a living lab for digital art, blockchain culture, and community.
-    </p>
+    <p class="section-label mb-4"><%= t('.featured_label') %></p>
+    <h1><%= t('.title') %></h1>
+    <p class="mx-auto mt-4 max-w-xl text-muted"><%= t('.subtitle') %></p>
   </div>
 </section>
 
@@ -27,11 +24,9 @@
 
 <section class="py-8">
   <div class="mx-auto max-w-2xl">
-    <p>What started as an experiment became a movement. For over three years, the Walenweeshuis was the place where artists, builders, and curious minds came together to explore the intersection of art, technology, and community.</p>
-
-    <p>NFT exhibitions lined the walls of a building that once sheltered children — now sheltering ideas. Crypto drinks on Tuesday nights. Workshops on Wednesday afternoons. Pop-up events that spilled into the courtyard. A space where you could walk in with nothing and walk out with a project, a collaborator, or a completely new perspective.</p>
-
-    <p>The chapter at the Walenweeshuis has closed, but what was built there lives on — in the people who connected, the projects that launched, and the culture that grew from within those walls.</p>
+    <p><%= t('.paragraph_1') %></p>
+    <p><%= t('.paragraph_2') %></p>
+    <p><%= t('.paragraph_3') %></p>
 
     <div class="my-10 flex items-center gap-4" aria-hidden="true">
       <span class="h-px flex-1 bg-subtle"></span>
@@ -40,51 +35,49 @@
     </div>
 
     <div class="text-center">
-      <p class="hand text-2xl">"We didn't just exhibit art — we lived it."</p>
-      <p class="mt-2 text-sm text-muted">— The Playground community</p>
+      <p class="hand text-2xl"><%= t('.quote') %></p>
+      <p class="mt-2 text-sm text-muted"><%= t('.quote_by') %></p>
     </div>
   </div>
 </section>
 
-<!-- Timeline -->
 <section class="py-12">
   <div class="mx-auto max-w-2xl">
-    <h2 class="hand text-center">The Timeline</h2>
+    <h2 class="hand text-center"><%= t('.timeline') %></h2>
     <div class="mt-8 space-y-6">
       <div class="intent-card">
-        <span class="section-label text-muted">May 2022</span>
-        <h3 class="mt-1 text-lg font-bold">Doors Open</h3>
-        <p class="mt-1 text-sm text-muted">The NFT Playground moves into the Walenweeshuis. First exhibitions go up. The space comes alive.</p>
+        <span class="section-label text-muted"><%= t('.timeline_1_date') %></span>
+        <h3 class="mt-1 text-lg font-bold"><%= t('.timeline_1_title') %></h3>
+        <p class="mt-1 text-sm text-muted"><%= t('.timeline_1_desc') %></p>
       </div>
       <div class="intent-card">
-        <span class="section-label text-muted">2022 — 2023</span>
-        <h3 class="mt-1 text-lg font-bold">Community Takes Root</h3>
-        <p class="mt-1 text-sm text-muted">Weekly crypto drinks, artist residencies, DAO experiments. A network of creators forms around the space.</p>
+        <span class="section-label text-muted"><%= t('.timeline_2_date') %></span>
+        <h3 class="mt-1 text-lg font-bold"><%= t('.timeline_2_title') %></h3>
+        <p class="mt-1 text-sm text-muted"><%= t('.timeline_2_desc') %></p>
       </div>
       <div class="intent-card">
-        <span class="section-label text-muted">2023 — 2024</span>
-        <h3 class="mt-1 text-lg font-bold">Expanding Horizons</h3>
-        <p class="mt-1 text-sm text-muted">Cosmolocal launches. Local entrepreneurs discover Web3. The Playground becomes a bridge between worlds.</p>
+        <span class="section-label text-muted"><%= t('.timeline_3_date') %></span>
+        <h3 class="mt-1 text-lg font-bold"><%= t('.timeline_3_title') %></h3>
+        <p class="mt-1 text-sm text-muted"><%= t('.timeline_3_desc') %></p>
       </div>
       <div class="intent-card">
-        <span class="section-label text-muted">2024 — 2025</span>
-        <h3 class="mt-1 text-lg font-bold">Legacy in Motion</h3>
-        <p class="mt-1 text-sm text-muted">The KeyPass community solidifies. Governance takes shape. The seeds planted at the Walenweeshuis scatter across Amsterdam.</p>
+        <span class="section-label text-muted"><%= t('.timeline_4_date') %></span>
+        <h3 class="mt-1 text-lg font-bold"><%= t('.timeline_4_title') %></h3>
+        <p class="mt-1 text-sm text-muted"><%= t('.timeline_4_desc') %></p>
       </div>
       <div class="intent-card">
-        <span class="section-label text-muted">August 2025</span>
-        <h3 class="mt-1 text-lg font-bold">A Chapter Closes</h3>
-        <p class="mt-1 text-sm text-muted">The Walenweeshuis era ends. The community carries forward — the Playground is not a building, it's a movement.</p>
+        <span class="section-label text-muted"><%= t('.timeline_5_date') %></span>
+        <h3 class="mt-1 text-lg font-bold"><%= t('.timeline_5_title') %></h3>
+        <p class="mt-1 text-sm text-muted"><%= t('.timeline_5_desc') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="py-12 text-center">
-  <h2 class="hand">The story continues.</h2>
-  <p class="mx-auto mt-4 max-w-lg text-muted">The Playground is looking for its next home. The community is still here — still creating, still connecting, still playing the future.</p>
+  <h2 class="hand"><%= t('.cta_title') %></h2>
+  <p class="mx-auto mt-4 max-w-lg text-muted"><%= t('.cta_text') %></p>
   <div class="mt-8">
-    <%= render 'layouts/button', text: "Get Involved", href: get_involved_path %>
+    <%= render 'layouts/button', text: t('.cta_button'), href: get_involved_path %>
   </div>
 </section>

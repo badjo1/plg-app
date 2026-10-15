@@ -4,10 +4,18 @@ en:
   global:
     footer:
       about_us: About us
-      who_we_are: Who we are 
-      what_we_do: What we do 
+      who_we_are: Who we are
+      what_we_do: What we do
       vision: Vision
       privacy: Privacy
+      here_and_now: Here & Now
+      get_involved: Get Involved
+      explore: Explore
+      communities: Communities
+      key_holders: Key Holders
+      governance: Governance
+      token: Token
+      tagline: make room for what's next
     forms:
       submit: SAVE
     menu:
@@ -23,9 +31,253 @@ en:
   pages:
     home:
       tagline: A space pregnant with possibility
+      hero_heading_html: "What brings you<br>to the"
+      hero_subtitle: Follow your curiosity. Bring an idea. Meet someone unexpected.
+      hero_cta: "You don't need a plan — just an intention."
+      pick_intent: Pick what feels right
+      intent_explore: Explore
+      intent_explore_desc: "I'm curious. Show me around."
+      intent_create: Create
+      intent_create_desc: "I've got an idea to play with."
+      intent_connect: Connect
+      intent_connect_desc: "I'm here for people and sparks."
+      intent_contribute: Contribute
+      intent_contribute_desc: "I've got something to share."
+      custom_label: Or tell us in your own words
+      custom_placeholder: "Or tell us in your own words…"
+      and_then: "and then…"
+      make_connection: Make a connection
+      email_title: Your email is your key.
+      email_subtitle: No password. No fuss. Just a way back in.
+      lets_explore: "Let's explore"
+      lets_create: "Let's create"
+      lets_connect: "Let's connect"
+      lets_contribute: "Let's contribute"
+      agree_text: By continuing, you agree to be contacted about your Playground access.
+      about_title: What is the Playground?
+      about_text_1: The Playground is a space where digital creators, entrepreneurs, and artists come together to experiment, collaborate, and create impact. It's more than just a place; it's a community built on innovation, openness, and mutual growth.
+      about_text_2: "At the Playground, we don't just imagine the future—we play it into existence. Here, play means flowing with possibility rather than being confined by structure."
+      projects_title: Current Projects
+      project_nft_museum: NFT Museum
+      project_nft_museum_desc: Collaborating with artists and curators to bring digital art to life and engage the community through NFTs.
+      project_cosmolocal: Cosmolocal
+      project_cosmolocal_desc: Exploring the balance between local production and global networks. Creating new connections.
+      project_entrepreneurs: Local Entrepreneur Onboarding
+      project_entrepreneurs_desc: Supporting local businesses in Amsterdam to connect with the global blockchain community.
+      explore_btn: Explore
+      get_involved_title: Get Involved
+      get_involved_text: The Playground is open to creators, entrepreneurs, and everyone in between. Whether you want to start a project, join a community, or contribute to ongoing work, we welcome you!
+      join_playground: Join the Playground
+      stories_title: Stories & Podcasts
+      stories_subtitle: Hear from our community of creators, artists, and thought leaders.
+      story_nima: "Artist Spotlight: Nima"
+      story_nima_desc: "Discover Nima's creative process and how she uses blockchain technology to create immersive art experiences."
+      read_story: Read Story
+      story_daos: The Future of DAOs
+      story_daos_desc: Learn from experts about how DAOs are shaping the future of governance and collaboration.
+      listen_podcast: Listen Podcast
+      story_cosmolocal: "Cosmolocalism: Bridging Local and Global"
+      story_cosmolocal_desc: Explore how cosmolocalism fosters mutual knowledge sharing between local and global networks.
+      voices_title: Community Voices
+      voice_1: "A decentralized space where art, crypto, and community evolve naturally. No roadmap, no force—just movement."
+      voice_1_by: "— An Entrepreneur"
+      voice_2: "I arrived here with no plan, and now we're building something extraordinary together."
+      voice_2_by: "— A participant"
+      voice_3: The Playground breathes freedom. Nothing is forced, everything flows.
+      voice_3_by: "— An artist"
+      value_freedom: Freedom
+      value_freedom_desc: Move between places that inspire you.
+      value_curiosity: Curiosity
+      value_curiosity_desc: Discover what sparks your imagination.
+      value_welcome: Welcome
+      value_welcome_desc: Feel at home. Help others do too.
+      value_meeting: Meeting
+      value_meeting_desc: Let the Ki flow and resonate.
+      value_meaning: Meaning
+      value_meaning_desc: "Pass something on — together."
       teaser: What if you could make a difference doing what brings you the most joy?
-      statement: In the Playground, we create a unique space for experimentation and discovery together. Here, we share our passion and turn ideas into action. Join us, and let’s grow together!
+      statement: "In the Playground, we create a unique space for experimentation and discovery together. Here, we share our passion and turn ideas into action. Join us, and let's grow together!"
       get_involved: Get Involved
       learn_more: Learn More
+    explore:
+      title: Explore the Playground
+      subtitle: Discover art, projects, and stories from the Playground community.
+      art_title: Art Collection
+      art_subtitle: A permanent collection of digital and physical artworks curated within the Playground.
+      featured_artwork: Featured Artwork
+      featured_artwork_desc: Explore NFT and digital art pieces from our collection.
+      curated_artists: Curated Artists
+      curated_artists_desc: Meet the artists shaping the future of digital creativity.
+      ongoing_exhibitions: Ongoing Exhibitions
+      ongoing_exhibitions_desc: Visit our latest curated exhibitions in the Playground.
+      projects_title: Explore Projects
+      projects_subtitle: Discover active projects happening inside the Playground.
+      live_experiments: Live Experiments
+      live_experiments_desc: Follow decentralized experiments and blockchain prototypes.
+      collaborative_builds: Collaborative Builds
+      collaborative_builds_desc: Join forces with makers and developers on community-driven projects.
+      stories_title: Community Stories
+      stories_subtitle: Read about the people shaping the Playground.
+      featured_story: Featured Story
+      featured_story_title: Three Years in the Walenweeshuis
+      featured_story_desc: From May 2022 to August 2025, the NFT Playground called the Walenweeshuis home. A recap of what we built together.
+      watch_and_read: Watch & read
+      founder_insights: Founder Insights
+      founder_insights_desc: Meet the visionaries behind Playground projects.
+      podcast_episodes: Podcast Episodes
+      podcast_episodes_desc: Listen to conversations with creators and innovators.
+      community_spotlights: Community Spotlights
+      community_spotlights_desc: Discover members making an impact.
+      spaces_title: Spaces in the Playground
+      spaces_subtitle: Find your place within the Playground.
+      nft_museum: The NFT Museum
+      nft_museum_desc: A dedicated space for digital and blockchain-based art.
+      co_creation_labs: Co-Creation Labs
+      co_creation_labs_desc: Spaces for collaboration, brainstorming, and prototyping.
+      event_hall: Event Hall
+      event_hall_desc: Host and attend live talks, workshops, and gatherings.
+    stories:
+      featured_label: Featured Story
+      title: Three Years in the Walenweeshuis
+      subtitle: "From May 2022 to August 2025, the NFT Playground called the Walenweeshuis home — a 17th-century orphanage in the heart of Amsterdam, turned into a living lab for digital art, blockchain culture, and community."
+      paragraph_1: What started as an experiment became a movement. For over three years, the Walenweeshuis was the place where artists, builders, and curious minds came together to explore the intersection of art, technology, and community.
+      paragraph_2: "NFT exhibitions lined the walls of a building that once sheltered children — now sheltering ideas. Crypto drinks on Tuesday nights. Workshops on Wednesday afternoons. Pop-up events that spilled into the courtyard. A space where you could walk in with nothing and walk out with a project, a collaborator, or a completely new perspective."
+      paragraph_3: "The chapter at the Walenweeshuis has closed, but what was built there lives on — in the people who connected, the projects that launched, and the culture that grew from within those walls."
+      quote: "\"We didn't just exhibit art — we lived it.\""
+      quote_by: "— The Playground community"
+      timeline: The Timeline
+      timeline_1_date: May 2022
+      timeline_1_title: Doors Open
+      timeline_1_desc: The NFT Playground moves into the Walenweeshuis. First exhibitions go up. The space comes alive.
+      timeline_2_date: "2022 — 2023"
+      timeline_2_title: Community Takes Root
+      timeline_2_desc: Weekly crypto drinks, artist residencies, DAO experiments. A network of creators forms around the space.
+      timeline_3_date: "2023 — 2024"
+      timeline_3_title: Expanding Horizons
+      timeline_3_desc: Cosmolocal launches. Local entrepreneurs discover Web3. The Playground becomes a bridge between worlds.
+      timeline_4_date: "2024 — 2025"
+      timeline_4_title: Legacy in Motion
+      timeline_4_desc: The KeyPass community solidifies. Governance takes shape. The seeds planted at the Walenweeshuis scatter across Amsterdam.
+      timeline_5_date: August 2025
+      timeline_5_title: A Chapter Closes
+      timeline_5_desc: "The Walenweeshuis era ends. The community carries forward — the Playground is not a building, it's a movement."
+      cta_title: The story continues.
+      cta_text: "The Playground is looking for its next home. The community is still here — still creating, still connecting, still playing the future."
+      cta_button: Get Involved
+    get_involved:
+      title: Step into the Flow
+      subtitle: "The Playground is open—where do you want to begin? Whether you're here to create, connect, or contribute, there's a place for you."
+      global_local_title: "Local Impact, Global Knowledge"
+      global_local_text: By sharing knowledge and resources between local communities and global networks, we empower self-production and governance. What is created locally flows into a global knowledge hub, allowing everyone to benefit.
+      create_title: Create & Experiment
+      create_text: "Launch your own NFT, DAO, or experiment with new ideas. The space is yours to explore."
+      start_a_project: Start a Project
+      discover_title: Discover & Connect
+      discover_text: "Wander through the Playground, check out live projects, and experience digital art."
+      explore: Explore
+      cocreate_title: Co-Create & Contribute
+      cocreate_text: "Meet creators, share knowledge, and help shape the Playground together."
+      join_a_community: Join a Community
+    now:
+      title: Live in the Playground
+      subtitle: Discover the projects happening right now in the Playground. Join in, learn, and help build the future.
+      active_projects: Active Projects
+      active_subtitle: See what we're currently working on and join in.
+      nft_museum: NFT Museum
+      nft_museum_desc: Together with Nima and artists, we're building an NFT exhibition.
+      more_info: More info
+      cosmolocal: Cosmolocal (May)
+      cosmolocal_desc: A month dedicated to connecting local and global knowledge.
+      join_in: Join in
+      entrepreneurs: Entrepreneur Onboarding
+      entrepreneurs_desc: We're introducing local entrepreneurs in the neighborhood to Web3 and the Playground.
+      connect: Connect
+      idea_title: Got an idea?
+      idea_text: The Playground grows through community initiatives. Want to organize or contribute something? Let us know!
+      start_project: Start a project
+    events:
+      title: Events in the Playground
+      subtitle: "From meetups to exhibitions—discover what's happening in the Playground and join in!"
+      view_events: View Events on Luma
+      past_events: Past Events
+      past_subtitle: See what events we've organized.
+      nft_kickoff: NFT Season Kickoff
+      nft_kickoff_desc: An evening full of digital art and blockchain innovation.
+      view_on_luma: View on Luma
+      wondermarkt: Wondermarkt
+      wondermarkt_desc: "Stories, music, stalls, and Web3 discussions in the courtyard."
+      organize_title: Want to organize an event?
+      organize_text: The Playground is a place for experimentation and encounter. Got an idea for an event? Let us know!
+      organiseer_een_event: Organize an Event
+    communities:
+      title: Join a Community
+      subtitle: Discover groups within the Playground that match your interests and join in.
+      choose_title: Choose a group that fits you
+      choose_subtitle: Find like-minded people and collaborate on projects and ideas.
+      join_group: Join this group
+      start_title: Start your own group?
+      start_text: Got an idea for a community? Start your own group and build something special together.
+      start_group: Start a group
+    members:
+      title: Join the Playground
+      subtitle: A space for creators, built by creators. Become a KeyPass holder and help shape the future of the Playground.
+      keypass_title: The KeyPass
+      keypass_text_1_html: "In May 2023, 17 pioneers joined the Playground by acquiring the first-ever <a href=\"https://app.manifold.xyz/c/playing-the-future\" target=\"_blank\" class=\"text-forest font-semibold underline\">PLAYING THE FUTURE pass</a> — an NFT artwork by Felix LePeintre. This marked the beginning of a shared journey toward securing a permanent home for digital creation in Amsterdam."
+      keypass_text_2: "Now, three years later, the Playground has evolved. As a passholder, you are not just a member—you can become a co-creator of this space."
+      agenda_title: Access to the Central Agenda
+      agenda_text: "Stay connected with everything happening in the Playground, from community events to creative sessions."
+      space_title: Use the Space
+      space_text: Book the Playground for your projects or underlet it to others under your responsibility.
+      decide_title: You Decide Who Joins
+      decide_text: Passholders collectively decide who joins the network and shape the shared use of the space.
+      more_title: More Than a Membership
+      more_text: "While not official yet, keyholders are set to become part of a cooperative-in-the-making, ensuring long-term stewardship of the Playground."
+      how_to_join: How to Join?
+      step_1: "Get the New KeyPass – Gain access and become part of the Playground's evolution."
+      step_2: "Engage & Contribute – Use the space, host events, and help shape the future."
+      step_3: "Vote on New Members – As a passholder, you collectively decide who joins next."
+      get_key: Get Your Key
+      existing_title: Existing Passholders
+      existing_text: "If you already hold a PLAYING THE FUTURE pass, you can renew your KeyPass for free or at a discounted rate (final details to be confirmed)."
+    governance:
+      title: Playground DAO
+      subtitle: Govern the Playground together. KeyPass holders decide who uses the space, PLG holders vote on budget and policy.
+      join_dao: Join the DAO (STAKE PLG)
+      how_title: How does it work?
+      keypass_title: "KeyPass = Access & Management"
+      keypass_text_1: KeyPass holders decide on the use of the space and who may use it.
+      keypass_text_2: They can make proposals for important changes and new initiatives.
+      plg_title: PLG Staking = Voting Rights
+      plg_text_1: PLG holders vote on proposals from KeyPass holders and decide on budgets and activities.
+      plg_text_2: Active voters receive staking rewards.
+      decision_title: Decision Making
+      decision_keypass: KeyPass holders make proposals about space usage and initiatives.
+      decision_plg: PLG stakers vote on these proposals and operational decisions.
+      why_title: Why join?
+      why_text: Help the Playground grow and have a say in its future.
+      why_influence: Influence on decisions
+      why_rewards: Rewards for active participation
+      why_community: Shape the community
+    token:
+      title: PLG Token
+      subtitle: The digital currency of the Playground. Use PLG for renting space, supporting artists, and paying for drinks and events.
+      get_plg: Get PLG
+      how_title: How does PLG work?
+      how_text: "PLG tokens are managed by keypass holders. They can mint and burn PLG and use it to reserve space in the Playground. Visitors can earn and spend PLG as a loyalty token — perfect for buying beer, art, or access to exclusive events."
+      keypass_title: Keypass Holders
+      keypass_text: Can mint PLG and use it to book the Playground.
+      visitors_title: Visitors & Community
+      visitors_text: Earn PLG through events and use it for consumptions and art.
+      exchange_title: Exchange & Use
+      exchange_text: PLG can be transferred or redeemed within the Playground community.
+      what_title: What can you do with PLG?
+      what_space: Rent space
+      what_art: Pay for art & events
+      what_drinks: Beer & other goodies
+      nft_title: NFTs & Access
+      nft_text: Only keypass holders have full control over PLG. They can distribute, mint, and issue tokens within the Playground.
+      nft_access_title: NFT-based access
+      nft_access_text: Only keypass holders can mint and manage PLG.
+      community_use_title: Community use
+      community_use_text: "PLG is used as a loyalty token for visitors, making it easy to buy art and consumptions."
     who_we_are:
-

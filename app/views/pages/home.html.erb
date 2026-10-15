@@ -22,53 +22,53 @@
   <div class="relative z-10 mx-auto max-w-2xl text-center">
     <p class="section-label mb-4"><%= t('.tagline') %></p>
     <h1 class="hand text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-      What brings you<br>to the <span class="relative inline-block">Playground<svg class="absolute -bottom-3 left-[4%] w-[94%] text-accent" viewBox="0 0 400 24" aria-hidden="true"><path d="M5 18 Q180 -2 395 9" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span>?
+      <%= t('.hero_heading_html').html_safe %> <span class="relative inline-block">Playground<svg class="absolute -bottom-3 left-[4%] w-[94%] text-accent" viewBox="0 0 400 24" aria-hidden="true"><path d="M5 18 Q180 -2 395 9" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span>?
     </h1>
     <p class="mx-auto mt-8 max-w-xl text-base leading-7 sm:text-lg">
-      <%= t('.hero_subtitle', default: "Follow your curiosity. Bring an idea. Meet someone unexpected.") %><br class="hidden sm:block">
-      <%= t('.hero_cta', default: "You don't need a plan — just an intention.") %>
+      <%= t('.hero_subtitle') %><br class="hidden sm:block">
+      <%= t('.hero_cta') %>
     </p>
   </div>
 
   <!-- Intent cards + form -->
   <form id="welcome-form" class="relative z-10 mx-auto mt-12 max-w-2xl">
     <fieldset>
-      <legend class="section-label mb-4 text-center">01 — <%= t('.pick_intent', default: 'Pick what feels right') %></legend>
+      <legend class="section-label mb-4 text-center">01 — <%= t('.pick_intent') %></legend>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <button type="button" class="intent-card" data-intent="Explore" aria-pressed="true">
-          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_explore', default: 'Explore') %></span><span class="text-2xl">◎</span></span>
-          <span class="mt-1 block text-sm text-muted"><%= t('.intent_explore_desc', default: "I'm curious. Show me around.") %></span>
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_explore') %></span><span class="text-2xl">◎</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_explore_desc') %></span>
         </button>
         <button type="button" class="intent-card" data-intent="Create" aria-pressed="false">
-          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_create', default: 'Create') %></span><span class="text-2xl">✳</span></span>
-          <span class="mt-1 block text-sm text-muted"><%= t('.intent_create_desc', default: "I've got an idea to play with.") %></span>
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_create') %></span><span class="text-2xl">✳</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_create_desc') %></span>
         </button>
         <button type="button" class="intent-card" data-intent="Connect" aria-pressed="false">
-          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_connect', default: 'Connect') %></span><span class="text-2xl">♡</span></span>
-          <span class="mt-1 block text-sm text-muted"><%= t('.intent_connect_desc', default: "I'm here for people and sparks.") %></span>
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_connect') %></span><span class="text-2xl">♡</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_connect_desc') %></span>
         </button>
         <button type="button" class="intent-card" data-intent="Contribute" aria-pressed="false">
-          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_contribute', default: 'Contribute') %></span><span class="text-2xl">↗</span></span>
-          <span class="mt-1 block text-sm text-muted"><%= t('.intent_contribute_desc', default: "I've got something to share.") %></span>
+          <span class="flex items-center justify-between"><span class="text-lg font-bold"><%= t('.intent_contribute') %></span><span class="text-2xl">↗</span></span>
+          <span class="mt-1 block text-sm text-muted"><%= t('.intent_contribute_desc') %></span>
         </button>
       </div>
     </fieldset>
 
     <div class="mt-4">
-      <label for="custom-intention" class="sr-only"><%= t('.custom_label', default: 'Or tell us in your own words') %></label>
+      <label for="custom-intention" class="sr-only"><%= t('.custom_label') %></label>
       <input id="custom-intention" name="custom-intention" type="text" maxlength="240"
-        placeholder="<%= t('.custom_placeholder', default: 'Or tell us in your own words…') %>"
+        placeholder="<%= t('.custom_placeholder') %>"
         class="w-full rounded-2xl border border-subtle bg-transparent px-5 py-4 text-sm placeholder:text-hint">
     </div>
 
     <div class="my-8 flex items-center gap-4" aria-hidden="true">
-      <span class="h-px flex-1 bg-subtle"></span><span class="hand text-lg">and then…</span><span class="h-px flex-1 bg-subtle"></span>
+      <span class="h-px flex-1 bg-subtle"></span><span class="hand text-lg"><%= t('.and_then') %></span><span class="h-px flex-1 bg-subtle"></span>
     </div>
 
     <div class="text-center">
-      <p class="section-label mb-2">02 — <%= t('.make_connection', default: 'Make a connection') %></p>
-      <h2 class="hand text-3xl font-bold sm:text-4xl"><%= t('.email_title', default: 'Your email is your key.') %></h2>
-      <p class="mt-2 text-sm text-muted"><%= t('.email_subtitle', default: 'No password. No fuss. Just a way back in.') %></p>
+      <p class="section-label mb-2">02 — <%= t('.make_connection') %></p>
+      <h2 class="hand text-3xl font-bold sm:text-4xl"><%= t('.email_title') %></h2>
+      <p class="mt-2 text-sm text-muted"><%= t('.email_subtitle') %></p>
     </div>
 
     <div class="mt-5 flex flex-col gap-3 sm:flex-row">
@@ -77,26 +77,21 @@
         placeholder="you@example.com"
         class="min-w-0 flex-1 rounded-full border border-forest bg-white/70 px-6 py-4 text-base placeholder:text-hint">
       <button id="submit-button" type="submit" class="btn-primary group">
-        <span id="button-label"><%= t('.lets_explore', default: "Let's explore") %></span>
+        <span id="button-label"><%= t('.lets_explore') %></span>
         <span class="text-xl transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
       </button>
     </div>
     <p id="feedback" class="mt-4 min-h-6 text-center text-sm" role="status" aria-live="polite"></p>
-    <p class="mt-1 text-center text-xs text-hint"><%= t('.agree_text', default: 'By continuing, you agree to be contacted about your Playground access.') %></p>
+    <p class="mt-1 text-center text-xs text-hint"><%= t('.agree_text') %></p>
   </form>
 </section>
 <% end %>
 
 <!-- About the Playground -->
 <section class="py-12 text-center">
-  <h2 class="hand"><%= t('.about_title', default: 'What is the Playground?') %></h2>
-  <p class="mx-auto max-w-2xl text-muted">
-    The Playground is a space where digital creators, entrepreneurs, and artists come together to experiment, collaborate, and create impact.
-    It's more than just a place; it's a community built on innovation, openness, and mutual growth.
-  </p>
-  <p class="mx-auto mt-4 max-w-2xl text-muted">
-    At the Playground, we don't just imagine the future—we play it into existence. Here, play means flowing with possibility rather than being confined by structure.
-  </p>
+  <h2 class="hand"><%= t('.about_title') %></h2>
+  <p class="mx-auto max-w-2xl text-muted"><%= t('.about_text_1') %></p>
+  <p class="mx-auto mt-4 max-w-2xl text-muted"><%= t('.about_text_2') %></p>
   <div class="mt-6">
     <%= link_to t('global.menu.learn_more'), what_we_do_path, class: "font-semibold" %>
   </div>
@@ -104,38 +99,38 @@
 
 <!-- Current Projects -->
 <section class="py-12">
-  <h2 class="hand text-center"><%= t('.projects_title', default: 'Current Projects') %></h2>
+  <h2 class="hand text-center"><%= t('.projects_title') %></h2>
   <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
     <div class="intent-card">
       <span class="flex items-center justify-between">
-        <h3 class="text-lg font-bold">NFT Museum</h3>
+        <h3 class="text-lg font-bold"><%= t('.project_nft_museum') %></h3>
         <span class="text-2xl">✳</span>
       </span>
-      <p class="mt-2 text-sm text-muted">Collaborating with artists and curators to bring digital art to life and engage the community through NFTs.</p>
+      <p class="mt-2 text-sm text-muted"><%= t('.project_nft_museum_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Explore", href: now_path, size: "small" %>
+        <%= render 'layouts/button', text: t('.explore_btn'), href: now_path, size: "small" %>
       </div>
     </div>
 
     <div class="intent-card">
       <span class="flex items-center justify-between">
-        <h3 class="text-lg font-bold">Cosmolocal</h3>
+        <h3 class="text-lg font-bold"><%= t('.project_cosmolocal') %></h3>
         <span class="text-2xl">◎</span>
       </span>
-      <p class="mt-2 text-sm text-muted">Exploring the balance between local production and global networks. Creating new connections.</p>
+      <p class="mt-2 text-sm text-muted"><%= t('.project_cosmolocal_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Explore", href: "https://cosmolocal.space/", size: "small" %>
+        <%= render 'layouts/button', text: t('.explore_btn'), href: "https://cosmolocal.space/", size: "small" %>
       </div>
     </div>
 
     <div class="intent-card">
       <span class="flex items-center justify-between">
-        <h3 class="text-lg font-bold">Local Entrepreneur Onboarding</h3>
+        <h3 class="text-lg font-bold"><%= t('.project_entrepreneurs') %></h3>
         <span class="text-2xl">↗</span>
       </span>
-      <p class="mt-2 text-sm text-muted">Supporting local businesses in Amsterdam to connect with the global blockchain community.</p>
+      <p class="mt-2 text-sm text-muted"><%= t('.project_entrepreneurs_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Explore", href: now_path, size: "small" %>
+        <%= render 'layouts/button', text: t('.explore_btn'), href: now_path, size: "small" %>
       </div>
     </div>
   </div>
@@ -143,41 +138,39 @@
 
 <!-- Get Involved -->
 <section class="py-12 text-center">
-  <h2 class="hand"><%= t('.get_involved_title', default: 'Get Involved') %></h2>
-  <p class="mx-auto max-w-xl text-muted">
-    The Playground is open to creators, entrepreneurs, and everyone in between. Whether you want to start a project, join a community, or contribute to ongoing work, we welcome you!
-  </p>
+  <h2 class="hand"><%= t('.get_involved_title') %></h2>
+  <p class="mx-auto max-w-xl text-muted"><%= t('.get_involved_text') %></p>
   <div class="mt-8">
-    <%= render 'layouts/button', text: t('.join_playground', default: 'Join the Playground'), href: get_involved_path %>
+    <%= render 'layouts/button', text: t('.join_playground'), href: get_involved_path %>
   </div>
 </section>
 
 <!-- Stories & Podcasts -->
 <section class="py-12">
-  <h2 class="hand text-center"><%= t('.stories_title', default: 'Stories & Podcasts') %></h2>
-  <p class="mx-auto mb-8 max-w-xl text-center text-muted">Hear from our community of creators, artists, and thought leaders.</p>
+  <h2 class="hand text-center"><%= t('.stories_title') %></h2>
+  <p class="mx-auto mb-8 max-w-xl text-center text-muted"><%= t('.stories_subtitle') %></p>
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
     <div class="intent-card">
-      <h3 class="text-lg font-bold">Artist Spotlight: Nima</h3>
-      <p class="mt-2 text-sm text-muted">Discover Nima's creative process and how she uses blockchain technology to create immersive art experiences.</p>
+      <h3 class="text-lg font-bold"><%= t('.story_nima') %></h3>
+      <p class="mt-2 text-sm text-muted"><%= t('.story_nima_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>
+        <%= render 'layouts/button', text: t('.read_story'), href: now_path, size: "small" %>
       </div>
     </div>
 
     <div class="intent-card">
-      <h3 class="text-lg font-bold">The Future of DAOs</h3>
-      <p class="mt-2 text-sm text-muted">Learn from experts about how DAOs are shaping the future of governance and collaboration.</p>
+      <h3 class="text-lg font-bold"><%= t('.story_daos') %></h3>
+      <p class="mt-2 text-sm text-muted"><%= t('.story_daos_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Listen Podcast", href: now_path, size: "small" %>
+        <%= render 'layouts/button', text: t('.listen_podcast'), href: now_path, size: "small" %>
       </div>
     </div>
 
     <div class="intent-card">
-      <h3 class="text-lg font-bold">Cosmolocalism: Bridging Local and Global</h3>
-      <p class="mt-2 text-sm text-muted">Explore how cosmolocalism fosters mutual knowledge sharing between local and global networks.</p>
+      <h3 class="text-lg font-bold"><%= t('.story_cosmolocal') %></h3>
+      <p class="mt-2 text-sm text-muted"><%= t('.story_cosmolocal_desc') %></p>
       <div class="mt-4">
-        <%= render 'layouts/button', text: "Read Story", href: now_path, size: "small" %>
+        <%= render 'layouts/button', text: t('.read_story'), href: now_path, size: "small" %>
       </div>
     </div>
   </div>
@@ -186,19 +179,19 @@
 <!-- Community Voices -->
 <section class="py-12">
   <div class="mx-auto max-w-3xl text-center">
-    <h2 class="hand"><%= t('.voices_title', default: 'Community Voices') %></h2>
+    <h2 class="hand"><%= t('.voices_title') %></h2>
     <div class="mt-6 space-y-8">
       <div>
-        <p class="hand text-xl italic">"A decentralized space where art, crypto, and community evolve naturally. No roadmap, no force—just movement."</p>
-        <p class="mt-2 text-sm text-muted">— An Entrepreneur</p>
+        <p class="hand text-xl italic"><%= t('.voice_1') %></p>
+        <p class="mt-2 text-sm text-muted"><%= t('.voice_1_by') %></p>
       </div>
       <div>
-        <p class="hand text-xl italic">"I arrived here with no plan, and now we're building something extraordinary together."</p>
-        <p class="mt-2 text-sm text-muted">— A participant</p>
+        <p class="hand text-xl italic"><%= t('.voice_2') %></p>
+        <p class="mt-2 text-sm text-muted"><%= t('.voice_2_by') %></p>
       </div>
       <div>
-        <p class="hand text-xl italic">"The Playground breathes freedom. Nothing is forced, everything flows."</p>
-        <p class="mt-2 text-sm text-muted">— An artist</p>
+        <p class="hand text-xl italic"><%= t('.voice_3') %></p>
+        <p class="mt-2 text-sm text-muted"><%= t('.voice_3_by') %></p>
       </div>
     </div>
   </div>
@@ -213,8 +206,8 @@
         <path class="sketch" d="M30 9 Q18 10 18 21 Q18 29 30 30 Q42 29 42 21 Q42 10 30 9 M30 30 L20 50 M30 30 L40 50 M10 18 L5 14 M50 18 L55 14"/>
         <path d="M24 15 Q21 22 29 25" fill="none" stroke="#80d455" stroke-width="5" stroke-linecap="round"/>
       </svg>
-      <h3 class="section-label mt-3">Freedom</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Move between places that inspire you.</p>
+      <h3 class="section-label mt-3"><%= t('.value_freedom') %></h3>
+      <p class="mt-2 text-sm leading-5 text-muted"><%= t('.value_freedom_desc') %></p>
     </article>
 
     <article>
@@ -223,8 +216,8 @@
         <circle cx="30" cy="30" r="9" class="sketch"/>
         <path d="M30 5 V2 M12 12 L9 9 M48 12 L51 9" stroke="#c8cb43" stroke-width="4" stroke-linecap="round"/>
       </svg>
-      <h3 class="section-label mt-3">Curiosity</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Discover what sparks your imagination.</p>
+      <h3 class="section-label mt-3"><%= t('.value_curiosity') %></h3>
+      <p class="mt-2 text-sm leading-5 text-muted"><%= t('.value_curiosity_desc') %></p>
     </article>
 
     <article>
@@ -232,16 +225,16 @@
         <path d="M30 51 S5 35 9 19 Q13 5 27 17 L30 21 L34 16 Q49 7 53 21 Q57 35 30 51 Z" fill="#e7e76b" stroke="#064e3b" stroke-width="3"/>
         <path class="sketch" d="M18 29 L26 37 L42 19"/>
       </svg>
-      <h3 class="section-label mt-3">Welcome</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Feel at home. Help others do too.</p>
+      <h3 class="section-label mt-3"><%= t('.value_welcome') %></h3>
+      <p class="mt-2 text-sm leading-5 text-muted"><%= t('.value_welcome_desc') %></p>
     </article>
 
     <article>
       <svg class="mx-auto h-14 w-14" viewBox="0 0 60 60" aria-hidden="true">
         <path class="sketch" d="M6 22 Q18 7 30 22 T54 22 M6 31 Q18 16 30 31 T54 31 M6 40 Q18 25 30 40 T54 40 M15 15 L11 10 M45 45 L49 50 M30 9 V4"/>
       </svg>
-      <h3 class="section-label mt-3">Meeting</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Let the Ki flow and resonate.</p>
+      <h3 class="section-label mt-3"><%= t('.value_meeting') %></h3>
+      <p class="mt-2 text-sm leading-5 text-muted"><%= t('.value_meeting_desc') %></p>
     </article>
 
     <article>
@@ -249,8 +242,8 @@
         <path d="M30 54 V28 M30 37 Q9 35 11 13 Q28 14 30 32 M30 29 Q32 7 50 7 Q51 26 30 29" fill="none" stroke="#064e3b" stroke-width="3.5" stroke-linecap="round"/>
         <path d="M30 54 V28 M30 37 Q9 35 11 13 Q28 14 30 32 M30 29 Q32 7 50 7 Q51 26 30 29" fill="none" stroke="#80d455" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <h3 class="section-label mt-3">Meaning</h3>
-      <p class="mt-2 text-sm leading-5 text-muted">Pass something on — together.</p>
+      <h3 class="section-label mt-3"><%= t('.value_meaning') %></h3>
+      <p class="mt-2 text-sm leading-5 text-muted"><%= t('.value_meaning_desc') %></p>
     </article>
 
   </div>
@@ -262,10 +255,10 @@
   const form = document.getElementById("welcome-form");
   const feedback = document.getElementById("feedback");
   const labels = {
-    Explore: "<%= t('.lets_explore', default: "Let's explore") %>",
-    Create: "<%= t('.lets_create', default: "Let's create") %>",
-    Connect: "<%= t('.lets_connect', default: "Let's connect") %>",
-    Contribute: "<%= t('.lets_contribute', default: "Let's contribute") %>"
+    Explore: "<%= t('.lets_explore') %>",
+    Create: "<%= t('.lets_create') %>",
+    Connect: "<%= t('.lets_connect') %>",
+    Contribute: "<%= t('.lets_contribute') %>"
   };
   let selectedIntent = "Explore";
 

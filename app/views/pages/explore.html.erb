@@ -1,63 +1,54 @@
 <% content_for :grid_word do %>DISCOVERY<% end %>
 <section class="py-16 bg-cream">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-4xl font-bold text-forest">Explore the Playground</h1>
-    <p class="mt-4 text-muted text-lg">
-      Discover art, projects, and stories from the Playground community.
-    </p>
+    <h1 class="text-4xl font-bold text-forest"><%= t('.title') %></h1>
+    <p class="mt-4 text-muted text-lg"><%= t('.subtitle') %></p>
   </div>
 </section>
 
-<!-- Kunst - Permanente collectie -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">🎨 Art Collection</h2>
-    <p class="mt-2 text-muted">A permanent collection of digital and physical artworks curated within the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.art_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.art_subtitle') %></p>
     <div class="grid md:grid-cols-3 gap-6 mt-6">
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <img src="artwork1.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-2xl">
-        <h3 class="text-xl font-semibold mt-4">Featured Artwork</h3>
-        <p class="text-muted">Explore NFT and digital art pieces from our collection.</p>
+        <h3 class="text-xl font-semibold mt-4"><%= t('.featured_artwork') %></h3>
+        <p class="text-muted"><%= t('.featured_artwork_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <img src="artwork2.jpg" alt="Artwork" class="w-full h-48 object-cover rounded-2xl">
-        <h3 class="text-xl font-semibold mt-4">Curated Artists</h3>
-        <p class="text-muted">Meet the artists shaping the future of digital creativity.</p>
+        <h3 class="text-xl font-semibold mt-4"><%= t('.curated_artists') %></h3>
+        <p class="text-muted"><%= t('.curated_artists_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <img src="exhibition.jpg" alt="Exhibition" class="w-full h-48 object-cover rounded-2xl">
-        <h3 class="text-xl font-semibold mt-4">Ongoing Exhibitions</h3>
-        <p class="text-muted">Visit our latest curated exhibitions in the Playground.</p>
+        <h3 class="text-xl font-semibold mt-4"><%= t('.ongoing_exhibitions') %></h3>
+        <p class="text-muted"><%= t('.ongoing_exhibitions_desc') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Projecten - De Playground verkennen -->
 <section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">🚀 Explore Projects</h2>
-    <p class="mt-2 text-muted">Discover active projects happening inside the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.projects_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.projects_subtitle') %></p>
     <div class="grid md:grid-cols-2 gap-6 mt-6">
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Live Experiments</h3>
-        <p class="text-muted">Follow decentralized experiments and blockchain prototypes.</p>
+        <h3 class="text-xl font-semibold"><%= t('.live_experiments') %></h3>
+        <p class="text-muted"><%= t('.live_experiments_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Collaborative Builds</h3>
-        <p class="text-muted">Join forces with makers and developers on community-driven projects.</p>
+        <h3 class="text-xl font-semibold"><%= t('.collaborative_builds') %></h3>
+        <p class="text-muted"><%= t('.collaborative_builds_desc') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Verhalen - De community vinden -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">📖 Community Stories</h2>
-    <p class="mt-2 text-muted">Read about the people shaping the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.stories_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.stories_subtitle') %></p>
 
-    <!-- Featured: Walenweeshuis -->
     <%= link_to stories_path, class: "mt-6 block intent-card hover:no-underline" do %>
       <div class="flex flex-col sm:flex-row gap-5 items-start">
         <div class="relative w-full sm:w-48 shrink-0 overflow-hidden rounded-xl" style="aspect-ratio:16/9;">
@@ -69,48 +60,47 @@
           </iframe>
         </div>
         <div>
-          <span class="section-label text-muted">Featured Story</span>
-          <h3 class="mt-1 text-xl font-bold">Three Years in the Walenweeshuis</h3>
-          <p class="mt-1 text-sm text-muted">From May 2022 to August 2025, the NFT Playground called the Walenweeshuis home. A recap of what we built together.</p>
-          <span class="mt-2 inline-flex items-center gap-1 text-sm font-bold text-forest">Watch & read <span aria-hidden="true">→</span></span>
+          <span class="section-label text-muted"><%= t('.featured_story') %></span>
+          <h3 class="mt-1 text-xl font-bold"><%= t('.featured_story_title') %></h3>
+          <p class="mt-1 text-sm text-muted"><%= t('.featured_story_desc') %></p>
+          <span class="mt-2 inline-flex items-center gap-1 text-sm font-bold text-forest"><%= t('.watch_and_read') %> <span aria-hidden="true">→</span></span>
         </div>
       </div>
     <% end %>
 
     <div class="grid md:grid-cols-3 gap-6 mt-6">
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Founder Insights</h3>
-        <p class="text-muted">Meet the visionaries behind Playground projects.</p>
+        <h3 class="text-xl font-semibold"><%= t('.founder_insights') %></h3>
+        <p class="text-muted"><%= t('.founder_insights_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Podcast Episodes</h3>
-        <p class="text-muted">Listen to conversations with creators and innovators.</p>
+        <h3 class="text-xl font-semibold"><%= t('.podcast_episodes') %></h3>
+        <p class="text-muted"><%= t('.podcast_episodes_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Community Spotlights</h3>
-        <p class="text-muted">Discover members making an impact.</p>
+        <h3 class="text-xl font-semibold"><%= t('.community_spotlights') %></h3>
+        <p class="text-muted"><%= t('.community_spotlights_desc') %></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Spaces in de Playground -->
 <section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">🏢 Spaces in the Playground</h2>
-    <p class="mt-2 text-muted">Find your place within the Playground.</p>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.spaces_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.spaces_subtitle') %></p>
     <div class="grid md:grid-cols-3 gap-6 mt-6">
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">The NFT Museum</h3>
-        <p class="text-muted">A dedicated space for digital and blockchain-based art.</p>
+        <h3 class="text-xl font-semibold"><%= t('.nft_museum') %></h3>
+        <p class="text-muted"><%= t('.nft_museum_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Co-Creation Labs</h3>
-        <p class="text-muted">Spaces for collaboration, brainstorming, and prototyping.</p>
+        <h3 class="text-xl font-semibold"><%= t('.co_creation_labs') %></h3>
+        <p class="text-muted"><%= t('.co_creation_labs_desc') %></p>
       </div>
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">Event Hall</h3>
-        <p class="text-muted">Host and attend live talks, workshops, and gatherings.</p>
+        <h3 class="text-xl font-semibold"><%= t('.event_hall') %></h3>
+        <p class="text-muted"><%= t('.event_hall_desc') %></p>
       </div>
     </div>
   </div>

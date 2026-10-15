@@ -1,54 +1,41 @@
 <% content_for :grid_word do %>EXPLORING<% end %>
 <section class="py-16 bg-cream">
   <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-4xl font-bold text-forest">🚀 Live in de Playground</h1>
-    <p class="mt-4 text-muted text-lg">
-      Ontdek de projecten die op dit moment plaatsvinden in de Playground. Doe mee, leer en bouw mee aan de toekomst.
-    </p>
+    <h1 class="text-4xl font-bold text-forest"><%= t('.title') %></h1>
+    <p class="mt-4 text-muted text-lg"><%= t('.subtitle') %></p>
   </div>
 </section>
 
-<!-- Projecten overzicht -->
 <section class="py-12">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-forest">🔴 Actieve Projecten</h2>
-    <p class="mt-2 text-muted">Bekijk waar we op dit moment aan werken en sluit je aan.</p>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.active_projects') %></h2>
+    <p class="mt-2 text-muted"><%= t('.active_subtitle') %></p>
     <div class="grid md:grid-cols-3 gap-6 mt-6">
-      
-      <!-- NFT Museum -->
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">🖼️ NFT Museum</h3>
-        <p class="text-muted">Samen met Nima en kunstenaars bouwen we aan een NFT-expositie.</p>
-        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl">Meer info</button>
+        <h3 class="text-xl font-semibold"><%= t('.nft_museum') %></h3>
+        <p class="text-muted"><%= t('.nft_museum_desc') %></p>
+        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl"><%= t('.more_info') %></button>
       </div>
 
-      <!-- Cosmolocal in mei -->
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">🌍 Cosmolocal (Mei)</h3>
-        <p class="text-muted">Een maand gewijd aan het verbinden van lokale en globale kennis.</p>
-        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl">Doe mee</button>
+        <h3 class="text-xl font-semibold"><%= t('.cosmolocal') %></h3>
+        <p class="text-muted"><%= t('.cosmolocal_desc') %></p>
+        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl"><%= t('.join_in') %></button>
       </div>
 
-      <!-- Onboarding ondernemers -->
       <div class="bg-white/50 shadow-none border border-subtle p-6 rounded-2xl">
-        <h3 class="text-xl font-semibold">🏪 Onboarding van ondernemers</h3>
-        <p class="text-muted">We introduceren lokale ondernemers in de buurt aan Web3 en de Playground.</p>
-        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl">Sluit je aan</button>
+        <h3 class="text-xl font-semibold"><%= t('.entrepreneurs') %></h3>
+        <p class="text-muted"><%= t('.entrepreneurs_desc') %></p>
+        <button class="mt-4 bg-forest text-white px-4 py-2 rounded-2xl"><%= t('.connect') %></button>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Oproep om bij te dragen -->
 <section class="py-12 bg-cream">
   <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-forest">👀 Heb jij een idee?</h2>
-    <p class="mt-2 text-muted">
-      De Playground groeit door initiatieven van de community. Wil jij iets organiseren of bijdragen? Laat het ons weten!
-    </p>
-    <button class="mt-6 bg-forest text-white px-6 py-3 rounded-2xl text-lg font-semibold">
-      Start een project
-    </button>
+    <h2 class="text-3xl font-bold text-forest"><%= t('.idea_title') %></h2>
+    <p class="mt-2 text-muted"><%= t('.idea_text') %></p>
+    <button class="mt-6 bg-forest text-white px-6 py-3 rounded-2xl text-lg font-semibold"><%= t('.start_project') %></button>
   </div>
 </section>
