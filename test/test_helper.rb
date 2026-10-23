@@ -1,6 +1,11 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+require "webmock/minitest"
+require_relative "test_helpers/session_test_helper"
+
+# Block all outgoing HTTP; tests must stub external calls explicitly.
+WebMock.disable_net_connect!(allow_localhost: true)
 
 module ActiveSupport
   class TestCase
@@ -12,4 +17,8 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
   end
+end
+
+class ActionDispatch::IntegrationTest
+  include SessionTestHelper
 end

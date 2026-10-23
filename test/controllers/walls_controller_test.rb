@@ -3,6 +3,7 @@ require "test_helper"
 class WallsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @wall = walls(:one)
+    sign_in_as users(:one)
   end
 
   test "should get index" do
@@ -20,7 +21,7 @@ class WallsControllerTest < ActionDispatch::IntegrationTest
       post walls_url, params: { wall: { title: @wall.title } }
     end
 
-    assert_redirected_to wall_url(Wall.last)
+    assert_redirected_to wall_url(Wall.last, locale: :en)
   end
 
   test "should show wall" do
@@ -35,7 +36,7 @@ class WallsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update wall" do
     patch wall_url(@wall), params: { wall: { title: @wall.title } }
-    assert_redirected_to wall_url(@wall)
+    assert_redirected_to wall_url(@wall, locale: :en)
   end
 
   test "should destroy wall" do
@@ -43,6 +44,6 @@ class WallsControllerTest < ActionDispatch::IntegrationTest
       delete wall_url(@wall)
     end
 
-    assert_redirected_to walls_url
+    assert_redirected_to walls_url(locale: :en)
   end
 end
