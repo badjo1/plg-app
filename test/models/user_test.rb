@@ -28,9 +28,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "rejects a duplicate email address" do
-    skip "BUG: no uniqueness validation; duplicates only fail at the database with RecordNotUnique"
-    user = User.new(email_address: users(:one).email_address, password: "secret123")
+    user = User.new(email_address: " ONE@example.com", password: "secret123")
     assert_not user.valid?
+    assert user.errors.of_kind?(:email_address, :taken)
   end
 
   test "authenticates by email address and password" do

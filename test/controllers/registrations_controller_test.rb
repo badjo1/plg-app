@@ -22,7 +22,7 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "does not sign up with an email address that is already taken" do
-    skip "BUG: User has no uniqueness validation, so the unique index raises ActiveRecord::RecordNotUnique (500)"
+    skip "BUG: failed sign-up renders :new, which raises on missing partial shared/_error_messages (500)"
 
     assert_no_difference("User.count") do
       post registration_url, params: { user: { email_address: users(:one).email_address, password: "secret123", password_confirmation: "secret123" } }
