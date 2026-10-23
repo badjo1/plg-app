@@ -61,6 +61,11 @@ class PagesController < ApplicationController
 		redirect_to to_url, allow_other_host: true 
 	end
 
+	def featured
+		to_url = "https://lu.ma/euampoxr"
+		redirect_to to_url, allow_other_host: true 
+	end
+
 	def cryptoartfriend
 		to_url = "https://luma.com/dxonvsdf"
 		redirect_to to_url, allow_other_host: true 

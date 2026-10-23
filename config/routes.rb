@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-    get :maisonscript, to: "pages#maisonscript"
+    get :maisonscript, to: "maison_script#index"
     get "who-we-are", to: "pages#who_we_are", as: "who_we_are"
     get "what-we-do", to: "pages#what_we_do", as: "what_we_do"
     get "get-involved", to: "pages#get_involved", as: "get_involved"

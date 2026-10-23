@@ -26,6 +26,7 @@ class SmokeTest < ActionDispatch::IntegrationTest
 
   EXTERNAL_REDIRECTS = {
     "/calendar" => "https://lu.ma/playground.amsterdam",
+    "/featured" => "https://lu.ma/euampoxr",
     "/cryptoartfriend" => "https://luma.com/dxonvsdf",
     "/become-crypto-art-friend" => "https://luma.com/dxonvsdf",
     "/current-exhibition" => "https://luma.com/dxonvsdf"
@@ -76,14 +77,13 @@ class SmokeTest < ActionDispatch::IntegrationTest
   end
 
   test "signed out: GET /maisonscript renders" do
-    skip "BUG: route points to pages#maisonscript, which has no action or view; MaisonScriptController#index has no route"
     get "/maisonscript"
     assert_response :success
+    assert_select "canvas#canvas"
   end
 
-  test "signed out: GET /featured renders" do
-    skip "BUG: route points to pages#featured, which has no action or view"
-    get "/featured"
+  test "signed out: GET /nl/maisonscript renders" do
+    get "/nl/maisonscript"
     assert_response :success
   end
 
